@@ -1,0 +1,27 @@
+Started GET "/" for 127.0.0.1 at 2019-02-04 15:22:27 -0500
+
+PG::ConnectionBad - FATAL:  database "mySeventhLevel_development" does not exist
+:
+
+Started POST "/__better_errors/f1973368d3b4a43a/variables" for 127.0.0.1 at 2019-02-04 15:22:29 -0500
+  [1m[35m (770.6ms)[0m  [1m[35mCREATE DATABASE "mySeventhLevel_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (414.5ms)[0m  [1m[35mCREATE DATABASE "mySeventhLevel_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-02-04 15:23:09 -0500
+
+NameError - uninitialized constant StaticPageController:
+
+Started POST "/__better_errors/9ed45ef1145b07da/variables" for 127.0.0.1 at 2019-02-04 15:23:10 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-04 15:25:31 -0500
+
+NameError - uninitialized constant StaticPageController:
+
+Started POST "/__better_errors/8711a7bbbabc8d99/variables" for 127.0.0.1 at 2019-02-04 15:25:32 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-04 15:28:47 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  Rendered static_page/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 2340ms (Views: 2334.0ms | ActiveRecord: 0.0ms)
+
+
