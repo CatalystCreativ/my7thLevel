@@ -25,3 +25,10 @@ Processing by StaticPageController#root as HTML
 Completed 200 OK in 2340ms (Views: 2334.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-02-04 15:33:39 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  Rendered static_page/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 698ms (Views: 684.3ms | ActiveRecord: 0.0ms)
+
+
