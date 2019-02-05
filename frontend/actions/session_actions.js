@@ -1,3 +1,4 @@
+import * as SessionAPIUtil from '../util/session_api_util';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const LOGOUT_USER = 'LOGOUT_USER';
@@ -49,6 +50,20 @@ export const login = (user) => dispatch => {
     .then(user => dispatch(receiveCurrentUser(user)))
     .fail(err => dispatch(receiveSessionErrors(err.responseJSON)));
 };
+
+// export const login = (user) => async dispatch => {
+//   debugger
+//   let response;
+//   try {
+//     response = await SessionAPIUtil.login(user);
+//     dispatch(receiveCurrentUser(user));
+//   } catch(error) {
+//     response = error;
+//     dispatch(receiveSessionErrors(error));
+//   }
+//   return response;
+// }
+
 
 export const logout = () => dispatch => {
   return SessionAPIUtil.logout()

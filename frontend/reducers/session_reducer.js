@@ -4,7 +4,7 @@ import {
 } from '../actions/session_actions';
 
 
-export const SessionReducer = (state = {}, action) => {
+const SessionReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       return action.user.id;
@@ -14,3 +14,5 @@ export const SessionReducer = (state = {}, action) => {
       return state;
   }
 };
+
+export default SessionReducer;

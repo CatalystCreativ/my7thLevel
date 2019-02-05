@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import * as SessionAPIUtil from './util/session_api_util';
-
+import { login, logout, signup } from './actions/session_actions';
+import {configureStore} from './store/store';
 
 document.addEventListener('DOMContentLoaded', () => {
+  
+  let store = configureStore();
+  
+  window.login = login;
+  window.logout = logout;
+  window.signup = signup;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  
+
   const root = document.getElementById('root');
-
-  window.login = SessionAPIUtil.login;
-  window.logout = SessionAPIUtil.logout;
-  window.signup = SessionAPIUtil.signup;
-
-
   ReactDOM.render(<h1>Welcome to My 7th Level</h1>, root);
 });

@@ -16,6 +16,13 @@ export const login = (user) => {
   });
 };
 
+// export const login = (user) => {
+//   return fetch('api/session', {
+//     method: 'post',
+//     data: { user }
+//   });
+// };
+
 export const logout = () => {
   return $.ajax({
     method: 'delete',
