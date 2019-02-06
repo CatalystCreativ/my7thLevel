@@ -141,3 +141,4 @@ Migrating to CreateSeventhLevels (20190206230236)
   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:16
   [1m[36mSeventhLevel Load (2.7ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels"[0m
+  [1m[36mUser Load (23.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
