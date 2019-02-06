@@ -16,21 +16,24 @@ class Greeting extends React.Component {
       );
     } else {
       output = (
-        <div className='nav-bar'>
-          <nav className='nav-left'>
-            <Link className='logo-name' to='/'>7th Level</Link>
-          </nav>
-          <nav className='nav-right'>
-            <ul>
-              <li>
-                <Link className='links' to='/signup'>Sign Up</Link>
+        <nav className='navbar navbar-expand-lg navbar-light bg-light'>
+          <Link className='navbar-brand' to='/'>7th Level</Link>
+
+          <button className='navbar-toggler' type='button' dataToggle='collapse' dataTarget='#navbarNav' ariaControls='navbaNav' ariaExpanded='false' ariaLabel='Toggle navigation'>
+            <span className="navbar-toggler-icon"></span>
+          </button>
+
+          <div className='collapse navbar-collapse' id='navbarNav'>
+            <ul className='navbar-nav mr-auto'>
+              <li className='nav-item'>
+                <Link className='nav-link' to='/signup'>Sign Up</Link>
               </li>
-              <li>
-                <Link className='links' to='/login'>Log In</Link>
+              <li className='nav-item'>
+                <Link className='nav-link' to='/login'>Log In</Link>
               </li>
             </ul>
-          </nav>
-        </div>
+          </div>
+        </nav>
       );
     }
 

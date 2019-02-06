@@ -4,12 +4,12 @@ import GreetingContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 
+{/* <h1>7th Level from App</h1> */}
 
 const App = () => {
   return (
     <div>
       <header>
-        <h1>7th Level from App</h1>
         <GreetingContainer />
       </header>
       

@@ -10,7 +10,8 @@ class SessionForm extends React.Component {
       email: '',
       password: '',
       firstName: '',
-      lastName: ''
+      lastName: '',
+      organization: ''
     };
 
     this.state = Object.assign({}, this.blankState);
@@ -51,49 +52,61 @@ class SessionForm extends React.Component {
 
     const extraFields = formType === "Log In" ? null : (
       <>
-        <div>
+        <div className="form-group">
           <label htmlFor="first-name">First Name: </label>
-          <input type="text" placeholder="First Name" id="first-name" value={this.state.firstName} onChange={this.update('firstName')}/>
+          <input type="text" className="form-control" placeholder="First Name" id="first-name" value={this.state.firstName} onChange={this.update('firstName')}/>
         </div>
 
-        <div>
+        <div className="form-group">
           <label htmlFor="last-name">Last Name: </label>
-          <input type="text" placeholder="Last Name" id="last-name" value={this.state.lastName} onChange={this.update('lastName')}/>
+          <input type="text" className="form-control" placeholder="Last Name" id="last-name" value={this.state.lastName} onChange={this.update('lastName')}/>
+        </div>
+
+        <div className="form-group">
+          <label htmlFor="organization">Organization: </label>
+          <input type="text" className="form-control" placeholder="Organization" id="organization" value={this.state.organization} onChange={this.update('organization')} />
         </div>
       </>
     );
 
     return (
       <div>
-        <header>
-          <h3>{formType}</h3>
-          {this.renderErrors()}
-        </header>
 
-        <form onSubmit={this.handleSubmit}>
-          {extraFields}
+        <div className="container border border-primary p-1">
+          <header>
+            <h3>{formType}</h3>
+            {this.renderErrors()}
+          </header>
+          
+          <div className="row">
+            <div className="col-4 mx-auto">
+              <form onSubmit={this.handleSubmit} className="">
+                {extraFields}
 
-          <div>
-            <label htmlFor="email">Email Address: </label>
-            <input type="text" placeholder="Email Address" id="email" value={this.state.email} onChange={this.update('email')}/>
+                <div className="form-group">
+                  <label htmlFor="email">Email Address: </label>
+                  <input type="text" className="form-control" placeholder="Email Address" id="email" value={this.state.email} onChange={this.update('email')}/>
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="password">Password: </label>
+                  <input type="password" className="form-control" placeholder="Password" id="password" value={this.state.password} onChange={this.update('password')}/>
+                </div>
+
+                <button type="submit" className="btn btn-primary">{formType}</button>
+              </form>
+            </div>  
           </div>
-
-          <div>
-            <label htmlFor="password">Password: </label>
-            <input type="password" placeholder="Password" id="password" value={this.state.password} onChange={this.update('password')}/>
-          </div>
-
-          <button type="submit">{formType}</button>
-        </form>
-
-        <div>
-          <Link to="/login">Log In</Link>
-          <Link to="/signup">Sign Up</Link>
         </div>
+
 
       </div>
     );
   }
 }
+{/* <div>
+  <Link to="/login">Log In</Link>
+  <Link to="/signup">Sign Up</Link>
+</div> */}
 
 export default SessionForm;
