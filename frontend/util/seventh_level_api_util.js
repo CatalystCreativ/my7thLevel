@@ -31,7 +31,7 @@ export const updateSeventhLevel = (seventhLevelData) => {
 
 export const deleteSeventhLevel = (id) => {
   return $.ajax({
-    method: 'DESTROY',
+    method: 'DELETE',
     url: `api/seventh_levels/${id}`
   });
 };
