@@ -112,3 +112,32 @@ Migrating to CreateSeventhLevels (20190206230236)
   ↳ /Users/jessicali/.rbenv/versions/2.5.3/bin/annotate:23
   [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ /Users/jessicali/.rbenv/versions/2.5.3/bin/annotate:23
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (27.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.7ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 1]]
+  ↳ db/seeds.rb:9
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mSeventhLevel Load (25.4ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels"[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (5.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (3.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo_user@notMail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (5.0ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at", "organization") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Demo"], ["last_name", "User"], ["email", "demo_user@notMail.com"], ["password_digest", "$2a$10$RKzIXKT2xoSF4RPO65ssTOOjiOjqx8aGzQVLthM1cq4gbb.3ataZ."], ["session_token", "u0CkzhBhxz-esHV2uSKCKQ"], ["created_at", "2019-02-06 23:43:47.803672"], ["updated_at", "2019-02-06 23:43:47.803672"], ["organization", "TheBestOrganization"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:16
+  [1m[36mSeventhLevel Create (2.8ms)[0m  [1m[32mINSERT INTO "seventh_levels" ("phrase", "core1", "core2", "core3", "core4", "core5", "action1", "question1", "goal1", "action2", "question2", "goal2", "action3", "question3", "goal3", "action4", "question4", "goal4", "action5", "question5", "goal5", "action6", "question6", "goal6", "action7", "question7", "goal7", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30) RETURNING "id"[0m  [["phrase", "phrase1"], ["core1", "core1"], ["core2", "core2"], ["core3", "core3"], ["core4", "core4"], ["core5", "core5"], ["action1", "action1"], ["question1", "question1"], ["goal1", "goal1"], ["action2", "action2"], ["question2", "question2"], ["goal2", "goal2"], ["action3", "action3"], ["question3", "question3"], ["goal3", "goal3"], ["action4", "action4"], ["question4", "question4"], ["goal4", "goal4"], ["action5", "action5"], ["question5", "question5"], ["goal5", "goal5"], ["action6", "action6"], ["question6", "question6"], ["goal6", "goal6"], ["action7", "action7"], ["question7", "question7"], ["goal7", "goal7"], ["user_id", 2], ["created_at", "2019-02-06 23:43:47.869349"], ["updated_at", "2019-02-06 23:43:47.869349"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[36mSeventhLevel Load (2.7ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels"[0m
