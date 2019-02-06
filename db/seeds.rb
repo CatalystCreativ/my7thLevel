@@ -9,4 +9,4 @@
 User.destroy_all
 
 # Users
-user1 = User.create!(first_name:'Demo',last_name:'User',email:'demo_user@notMail.com',password:'123456')
+user1 = User.create!(first_name:'Demo',last_name:'User',email:'demo_user@notMail.com',password:'123456', organization:'TheBestOrganization')
