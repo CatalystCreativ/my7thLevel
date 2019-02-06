@@ -10,10 +10,44 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_06_013739) do
+ActiveRecord::Schema.define(version: 2019_02_06_230236) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "seventh_levels", force: :cascade do |t|
+    t.text "phrase"
+    t.text "core1"
+    t.text "core2"
+    t.text "core3"
+    t.text "core4"
+    t.text "core5"
+    t.text "action1"
+    t.text "question1"
+    t.text "goal1"
+    t.text "action2"
+    t.text "question2"
+    t.text "goal2"
+    t.text "action3"
+    t.text "question3"
+    t.text "goal3"
+    t.text "action4"
+    t.text "question4"
+    t.text "goal4"
+    t.text "action5"
+    t.text "question5"
+    t.text "goal5"
+    t.text "action6"
+    t.text "question6"
+    t.text "goal6"
+    t.text "action7"
+    t.text "question7"
+    t.text "goal7"
+    t.integer "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_seventh_levels_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "first_name", null: false
