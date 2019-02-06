@@ -10,16 +10,19 @@
 #  session_token   :string           not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
+#  organization    :string
 #
 
 class User < ApplicationRecord
-  
+
   validates :first_name, :last_name, presence: true
   validates :email, presence: true, uniqueness: true
   validates :password, length: {minimum: 6, allow_nil: true}
 
   attr_reader :password
   after_initialize :ensure_session_token
+
+  has_many :seventh_levels
 
   # FRIPE
 
