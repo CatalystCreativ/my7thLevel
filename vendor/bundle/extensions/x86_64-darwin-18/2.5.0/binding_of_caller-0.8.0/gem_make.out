@@ -1,0 +1,16 @@
+current directory: /Users/JJ/Desktop/my7thLevel/vendor/bundle/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+/Users/JJ/.rvm/rubies/ruby-2.5.3/bin/ruby -r ./siteconf20190207-31605-1mf7pbp.rb extconf.rb
+
+current directory: /Users/JJ/Desktop/my7thLevel/vendor/bundle/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" clean
+make: *** No rule to make target `clean'.  Stop.
+
+current directory: /Users/JJ/Desktop/my7thLevel/vendor/bundle/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR="
+echo "Nada."
+Nada.
+
+current directory: /Users/JJ/Desktop/my7thLevel/vendor/bundle/gems/binding_of_caller-0.8.0/ext/binding_of_caller
+make "DESTDIR=" install
+echo "Nada."
+Nada.
