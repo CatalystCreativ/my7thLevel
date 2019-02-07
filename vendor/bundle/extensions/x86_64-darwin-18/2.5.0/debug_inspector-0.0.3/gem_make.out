@@ -1,0 +1,15 @@
+current directory: /Users/JJ/Desktop/my7thLevel/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+/Users/JJ/.rvm/rubies/ruby-2.5.3/bin/ruby -r ./siteconf20190207-31605-g84884.rb extconf.rb
+creating Makefile
+
+current directory: /Users/JJ/Desktop/my7thLevel/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" clean
+
+current directory: /Users/JJ/Desktop/my7thLevel/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR="
+compiling debug_inspector.c
+linking shared-object debug_inspector.bundle
+
+current directory: /Users/JJ/Desktop/my7thLevel/vendor/bundle/gems/debug_inspector-0.0.3/ext/debug_inspector
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 debug_inspector.bundle ./.gem.20190207-31605-1urzzl7

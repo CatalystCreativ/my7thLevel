@@ -142,6 +142,7 @@ Migrating to CreateSeventhLevels (20190206230236)
   ↳ db/seeds.rb:16
   [1m[36mSeventhLevel Load (2.7ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels"[0m
   [1m[36mUser Load (23.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+<<<<<<< HEAD
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7063921063919878935)[0m
   ↳ bin/rails:9
   [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -201,3 +202,307 @@ Migrating to AddNotesToSeventhLevel (20190207230737)
   ↳ db/seeds.rb:16
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:16
+=======
+Started GET "/" for 127.0.0.1 at 2019-02-07 16:42:02 -0500
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/12fe694212a4eb35/variables" for 127.0.0.1 at 2019-02-07 16:42:04 -0500
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE DATABASE "mySeventhLevel_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE DATABASE "mySeventhLevel_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7063921063919878935)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSeventhLevels (20190206230236)
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (40.6ms)[0m  [1m[35mCREATE TABLE "seventh_levels" ("id" bigserial primary key, "phrase" text, "core1" text, "core2" text, "core3" text, "core4" text, "core5" text, "action1" text, "question1" text, "goal1" text, "action2" text, "question2" text, "goal2" text, "action3" text, "question3" text, "goal3" text, "action4" text, "question4" text, "goal4" text, "action5" text, "question5" text, "goal5" text, "action6" text, "question6" text, "goal6" text, "action7" text, "question7" text, "goal7" text, "user_id" integer NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190206230236_create_seventh_levels.rb:3
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE  INDEX  "index_seventh_levels_on_user_id" ON "seventh_levels"  ("user_id")[0m
+  ↳ db/migrate/20190206230236_create_seventh_levels.rb:36
+  [1m[36mActiveRecord::SchemaMigration Create (3.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190206230236"]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (12.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7063921063919878935)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-02-07 16:43:19 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (65.3ms)
+Completed 200 OK in 4745ms (Views: 4730.5ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 16:55:18 -0500
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 2527ms (Views: 2516.9ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 16:59:19 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (20.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (61.0ms)
+Completed 200 OK in 1645ms (Views: 1610.5ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:00:01 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (41.5ms)
+Completed 200 OK in 1173ms (Views: 1160.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:10:36 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (47.8ms)
+Completed 500 Internal Server Error in 866ms (ActiveRecord: 17.5ms)
+
+
+
+NoMethodError - undefined method `start_with?' for nil:NilClass:
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___1265309189336521911_70358935118100'
+
+Started POST "/__better_errors/c82ad3b6cae7376c/variables" for 127.0.0.1 at 2019-02-07 17:10:39 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:12:14 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (34.3ms)
+Completed 500 Internal Server Error in 359ms (ActiveRecord: 1.5ms)
+
+
+
+NoMethodError - undefined method `start_with?' for nil:NilClass:
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___1265309189336521911_70358942734560'
+
+Started POST "/__better_errors/dca76e45131a6220/variables" for 127.0.0.1 at 2019-02-07 17:12:16 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:12:20 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (2.7ms)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.7ms)
+
+
+
+NoMethodError - undefined method `start_with?' for nil:NilClass:
+  app/views/layouts/application.html.erb:14:in `_app_views_layouts_application_html_erb___1265309189336521911_70358903189440'
+
+Started POST "/__better_errors/969e42ab70e917a0/variables" for 127.0.0.1 at 2019-02-07 17:12:20 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:12:37 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 3194ms (Views: 3179.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:12:45 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 60ms (Views: 55.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:13:41 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 178ms (Views: 170.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:13:45 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 72ms (Views: 69.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:14:59 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 139ms (Views: 130.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:15:40 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 195ms (Views: 174.5ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:15:45 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 108ms (Views: 102.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:16:14 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 163ms (Views: 153.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:25:03 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (117.9ms)
+Completed 200 OK in 655ms (Views: 607.4ms | ActiveRecord: 28.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:26:40 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (19.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (62.8ms)
+Completed 200 OK in 1854ms (Views: 1827.5ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:33:57 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (44.6ms)
+Completed 200 OK in 1511ms (Views: 1486.9ms | ActiveRecord: 16.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:34:22 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (106.3ms)
+Completed 200 OK in 3115ms (Views: 3064.9ms | ActiveRecord: 38.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:34:29 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 478ms (Views: 465.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:35:20 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 1000ms (Views: 993.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:39:01 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (23.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (72.9ms)
+Completed 200 OK in 1132ms (Views: 1093.3ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:40:47 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (10.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (35.7ms)
+Completed 200 OK in 1196ms (Views: 1178.3ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:40:57 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 258ms (Views: 245.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:41:13 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (20.9ms)
+Completed 200 OK in 1331ms (Views: 1323.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:41:24 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (56.6ms)
+Completed 200 OK in 1230ms (Views: 1194.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-07 17:42:35 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 1043ms (Views: 1037.1ms | ActiveRecord: 1.3ms)
+
+
+>>>>>>> 0b0e5fba5230f6dc9319df30f835aa1852933b4d

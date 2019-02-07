@@ -5,7 +5,6 @@ import levelsReducer from './levels_reducer';
 
 const entitiesReducer = combineReducers({
   users: usersReducer,
-  seventhLevel: levelReducer,
   seventhLevels: levelsReducer
 });
 

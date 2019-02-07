@@ -1,6 +1,14 @@
 import * as SeventhLevelAPIUtil from '../util/seventh_level_api_util';
 
 export const RECEIVE_SEVENTH_LEVEL = 'RECEIVE_SEVENTH_LEVEL';
+export const RECEIVE_SEVENTH_LEVELS = 'RECEIVE_SEVENTH_LEVELS';
+
+const receiveSeventhLevels = seventhLevels => {
+  return {
+    type: RECEIVE_SEVENTH_LEVELS,
+    seventhLevels
+  };
+};
 
 const receiveSeventhLevel = seventhLevel => {
   return {
@@ -24,6 +32,11 @@ export const createSeventhLevel = (seventhLevelData) => dispatch => {
 export const fetchSeventhLevel = (id) => dispatch => {
   return SeventhLevelAPIUtil.fetchSeventhLevel(id)
     .then((seventhLevel) => dispatch(receiveSeventhLevel(seventhLevel)));
+};
+
+export const fetchSeventhLevels = () => dispatch => {
+  return SeventhLevelAPIUtil.fetchSeventhLevels()
+    .then((seventhLevels) => dispatch(receiveSeventhLevels(seventhLevels)));
 };
 
 export const updateSeventhLevel = (seventhLevelData) => dispatch => {

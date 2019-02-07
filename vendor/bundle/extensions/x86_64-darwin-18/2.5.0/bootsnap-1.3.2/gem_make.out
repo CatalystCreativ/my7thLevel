@@ -1,0 +1,15 @@
+current directory: /Users/JJ/Desktop/my7thLevel/vendor/bundle/gems/bootsnap-1.3.2/ext/bootsnap
+/Users/JJ/.rvm/rubies/ruby-2.5.3/bin/ruby -r ./siteconf20190207-31605-1ql16wn.rb extconf.rb
+creating Makefile
+
+current directory: /Users/JJ/Desktop/my7thLevel/vendor/bundle/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/JJ/Desktop/my7thLevel/vendor/bundle/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/JJ/Desktop/my7thLevel/vendor/bundle/gems/bootsnap-1.3.2/ext/bootsnap
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20190207-31605-1dy30h0/bootsnap
