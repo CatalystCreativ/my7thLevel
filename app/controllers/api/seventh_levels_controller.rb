@@ -58,7 +58,8 @@ class Api::SeventhLevelsController < ApplicationController
     :action7,
     :question7,
     :goal7,
-    :user_id)
+    :user_id,
+    :notes)
   end
 
 end
