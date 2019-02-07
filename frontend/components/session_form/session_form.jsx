@@ -72,14 +72,15 @@ class SessionForm extends React.Component {
     return (
       <div>
 
-        <div className="container border border-primary p-1">
-          <header>
-            <h3>{formType}</h3>
-            {this.renderErrors()}
-          </header>
+        <div className="shadow w-50 mx-auto p-5 mt-5">
           
-          <div className="row">
-            <div className="col-4 mx-auto">
+          <div className="container">
+            <header className='w-25 mx-auto text-center'>
+              <h3>{formType}</h3>
+              {this.renderErrors()}
+            </header>
+
+            <div className="col-7 mx-auto">
               <form onSubmit={this.handleSubmit} className="">
                 {extraFields}
 
@@ -92,8 +93,9 @@ class SessionForm extends React.Component {
                   <label htmlFor="password">Password: </label>
                   <input type="password" className="form-control" placeholder="Password" id="password" value={this.state.password} onChange={this.update('password')}/>
                 </div>
-
-                <button type="submit" className="btn btn-primary">{formType}</button>
+                <div className='w-100 text-center'>
+                  <button type="submit" className="btn btn-primary">{formType}</button>
+                </div>
               </form>
             </div>  
           </div>
