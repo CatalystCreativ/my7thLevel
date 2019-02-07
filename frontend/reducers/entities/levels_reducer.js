@@ -1,4 +1,4 @@
-import { RECEIVE_SEVENTH_LEVELS } from '../../actions/sidebar_action';
+import { RECEIVE_SEVENTH_LEVELS } from '../../actions/sidebar_actions';
 import merge from 'lodash/merge';
 
 const levelsReducer = (state = {}, action) => {
