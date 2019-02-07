@@ -7,5 +7,6 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :show]
     resources :seventh_levels, only: [:create, :show, :index, :update]
     resource :session, only: [:create, :destroy]
+    resources :seventh_levels, only: [:create, :show, :destroy, :update]
   end
 end

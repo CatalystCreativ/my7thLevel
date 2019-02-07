@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import UsersReducer from './users_reducer';
+import usersReducer from './users_reducer';
+import levelsReducer from './levels_reducer';
 
 const entitiesReducer = combineReducers({
-  users: UsersReducer
+  users: usersReducer,
+  seventhLevel: levelsReducer
 });
 
 export default entitiesReducer;
