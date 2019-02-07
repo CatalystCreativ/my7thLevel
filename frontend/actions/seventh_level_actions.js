@@ -1,4 +1,4 @@
-import * as SeventhLevelAPIUtil from '../util/session_api_util';
+import * as SeventhLevelAPIUtil from '../util/seventh_level_api_util';
 
 export const RECEIVE_SEVENTH_LEVEL = 'RECEIVE_SEVENTH_LEVEL';
 
