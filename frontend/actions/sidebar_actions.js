@@ -1,10 +1,10 @@
 import * as SeventhLevelAPIUtil from '../util/seventh_level_api_util';
 
-export const RECEIVE_SEVENTH_LEVELs = 'RECEIVE_SEVENTH_LEVEL';
+export const RECEIVE_SEVENTH_LEVELS = 'RECEIVE_SEVENTH_LEVELS';
 
 const receiveSeventhLevels = seventhLevels => {
   return {
-    type: RECEIVE_SEVENTH_LEVELs,
+    type: RECEIVE_SEVENTH_LEVELS,
     seventhLevels
   };
 };

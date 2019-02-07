@@ -1,12 +1,12 @@
-import { RECEIVE_SEVENTH_LEVEL } from '../../actions/level_actions';
+import { RECEIVE_SEVENTH_LEVELS } from '../../actions/sidebar_action';
+import merge from 'lodash/merge';
 
 const levelsReducer = (state = {}, action) => {
   let newState = Object.assign({}, state);
 
   switch (action.type) {
-    case RECEIVE_SEVENTH_LEVEL:
-      newState[action.seventhLevel.id] = action.seventhLevel;
-      return newState;
+    case RECEIVE_SEVENTH_LEVELS:
+      return merge({}, state, action.seventhLevels );
     default:
       return state;
   }
