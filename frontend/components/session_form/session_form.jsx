@@ -70,10 +70,10 @@ class SessionForm extends React.Component {
     );
 
     return (
-      <div>
+      <div className="login-container">
 
-        <div className="shadow w-50 mx-auto p-5 mt-5">
-          
+        <div className="shadow w-50 mx-auto m-5 p-5">
+
           <div className="container">
             <header className='w-25 mx-auto text-center'>
               <h3>{formType}</h3>
@@ -97,7 +97,7 @@ class SessionForm extends React.Component {
                   <button type="submit" className="btn btn-primary">{formType}</button>
                 </div>
               </form>
-            </div>  
+            </div>
           </div>
         </div>
 

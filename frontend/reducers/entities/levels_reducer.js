@@ -1,5 +1,4 @@
-import { RECEIVE_SEVENTH_LEVELS } from '../../actions/sidebar_actions';
-import { RECEIVE_SEVENTH_LEVEL } from '../../actions/seventh_level_actions';
+import { RECEIVE_SEVENTH_LEVELS, RECEIVE_SEVENTH_LEVEL } from '../../actions/seventh_level_actions';
 
 const levelsReducer = (state = {}, action) => {
   let newState = Object.assign({}, state);

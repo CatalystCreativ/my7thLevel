@@ -506,3 +506,123 @@ Completed 200 OK in 1043ms (Views: 1037.1ms | ActiveRecord: 1.3ms)
 
 
 >>>>>>> 0b0e5fba5230f6dc9319df30f835aa1852933b4d
+Started GET "/" for 127.0.0.1 at 2019-02-08 14:55:14 -0500
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/c09456f90dafbe96/variables" for 127.0.0.1 at 2019-02-08 14:55:16 -0500
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE DATABASE "mySeventhLevel_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE DATABASE "mySeventhLevel_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-02-08 14:56:17 -0500
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/56e1ebe28e8ba45b/variables" for 127.0.0.1 at 2019-02-08 14:56:19 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-08 14:56:27 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/17f6ced9fee76d40/variables" for 127.0.0.1 at 2019-02-08 14:56:27 -0500
+Started GET "/" for 127.0.0.1 at 2019-02-08 14:59:00 -0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+:
+
+Started POST "/__better_errors/238175d3c61ccdde/variables" for 127.0.0.1 at 2019-02-08 14:59:01 -0500
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7063921063919878935)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddNotesToSeventhLevel (20190207230737)
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (21.1ms)[0m  [1m[35mALTER TABLE "seventh_levels" ADD "notes" text[0m
+  ↳ db/migrate/20190207230737_add_notes_to_seventh_level.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (4.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190207230737"]]
+  ↳ bin/rails:9
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (9.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(7063921063919878935)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 127.0.0.1 at 2019-02-08 15:01:03 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (115.1ms)
+Completed 200 OK in 5621ms (Views: 5597.6ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 15:03:07 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (14.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (76.2ms)
+Completed 200 OK in 1139ms (Views: 1088.7ms | ActiveRecord: 41.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 15:04:45 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (92.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (605.9ms)
+Completed 200 OK in 7768ms (Views: 7412.6ms | ActiveRecord: 292.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 15:06:18 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (67.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (274.3ms)
+Completed 200 OK in 2627ms (Views: 2389.0ms | ActiveRecord: 102.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-08 15:06:54 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (50.5ms)
+Completed 200 OK in 4574ms (Views: 4553.1ms | ActiveRecord: 5.0ms)
+
+

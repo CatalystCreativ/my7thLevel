@@ -1,1 +1,17 @@
+.splash-container {
+  display: flex;
+  flex-direction: column;
+  background: image-url('fists.jpeg');
+  width: 100%;
+}
 
+.shadow.w-50.mx-auto.m-5.p-5 {
+  justify-content: center;
+  align-content: center;
+  background: rgba(255, 255, 255, 0.9);
+  min-width: 360px;
+}
+
+.login-container {
+  margin-top: 100px;
+}
