@@ -41,4 +41,5 @@ seventh_level1 = SeventhLevel.create!(
   action7: 'action7',
   question7: 'question7',
   goal7: 'goal7',
-  user_id: user1.id)
+  user_id: user1.id,
+  notes: 'notes')

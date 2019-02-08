@@ -25,4 +25,5 @@ json.extract! seventh_level, :phrase,
 :action7,
 :question7,
 :goal7,
-:user_id
+:user_id,
+:notes
