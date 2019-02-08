@@ -80,8 +80,7 @@ const LEVEL_THREE = {
 const LEVEL_FOUR = {
   levelNum: "4",
   levelTitle: "STRUCTURE-DEPENDENT ENGAGEMENT",
-  levelDescription: "Characterized by a person's active response and participation in instruction and activities, provided
-  the barrier to entry and their personal sacrifice is low.",
+  levelDescription: "Characterized by a person's active response and participation in instruction and activities, provided the barrier to entry and their personal sacrifice is low.",
   actionDescription: "Define the action that represents this level for you/your company",
   actionExamples: "1. A 6-year old who participates when their teacher asks, 'raise your hand if you like candy'.
                    2. My employees will attend a non-mandatory virtual training fo HR when askes to, but will not particapate.
@@ -99,9 +98,7 @@ const LEVEL_FOUR = {
 const LEVEL_FIVE = {
   levelNum: "5",
   levelTitle: "SELF-REGULATED INTEREST",
-  levelDescription: "Characterized by a person's genuine excitement and interest in a message because it fulfills an element
-  of their own self/personal interests; their engagement is driven by self-interest, not an interest in the specific
-  individual or a company.",
+  levelDescription: "Characterized by a person's genuine excitement and interest in a message because it fulfills an element of their own self/personal interests; their engagement is driven by self-interest, not an interest in the specific individual or a company.",
   actionDescription: "Define the action that represents this level for you/your company",
   actionExamples: "1. A 6-year old who participates in class to earn extra credit or a reward for completion.
                    2. My employees will volunteer for a special project if they'll earn an extra vacation day.
@@ -111,8 +108,7 @@ const LEVEL_FIVE = {
                      2. How am I leveraging this giveaway or partnership to increase brand awareness or drive traffic?
                      3. How am I going to maximize people's participation after the incentive?",
   goalDescription: "Choose 1-2 goals for the next month or quarter",
-  goalExamples: "1. Indentify the mutually beneficial narrative prior to any partnership to ensure that the partner is
-  communicating the brand value to their audience in an integrative approach.
+  goalExamples: "1. Indentify the mutually beneficial narrative prior to any partnership to ensure that the partner is communicating the brand value to their audience in an integrative approach.
                  2. Increase website traffic or email acquisition from partnership (incentives) channels.
                  3. Launch a program that pays for masters courses that align with company goals, to recieve that benefit
   employees must dedicate a certain number of years of service.",
@@ -122,14 +118,11 @@ const LEVEL_FIVE = {
 const LEVEL_SIX = {
   levelNum: "6",
   levelTitle: "CRITICAL ENGAGEMENT",
-  levelDescription: "Characterized by a person's inspiration to make a change in their own life; taking a personal action to
-  set goals and transform their lives to achieve an objective based on a message or interaction."
+  levelDescription: "Characterized by a person's inspiration to make a change in their own life; taking a personal action to set goals and transform their lives to achieve an objective based on a message or interaction."
   actionDescription: "Define the action that represents this level for you/your company",
-  actionExamples: "1. A 6-year old who learns how sea turtles are affected by plastic in the ocean and recycles for the rest
-  of their life.
+  actionExamples: "1. A 6-year old who learns how sea turtles are affected by plastic in the ocean and recycles for the rest of their life.
                    2. My team has committed to a weaght loss and health goal.
-                   3. Our hotel is committed to sustainability and we hear stories of how our guests change their habits after
-staying in our property and seeing how we manage things.
+                   3. Our hotel is committed to sustainability and we hear stories of how our guests change their habits after staying in our property and seeing how we manage things.
                    4. My mentor shared her story of how shortening her meetings to 45 minutes changed her work life and it
 it inspired me to do the same.",
   questionDescription: "List the Questions associated with those actions",
@@ -145,11 +138,9 @@ it inspired me to do the same.",
 const LEVEL_SEVEN = {
   levelNum: "7",
   levelTitle: "LITERATE THINKING",
-  levelDescription: "Characterized by a person's reflection using prior knowledge, experience, feeling and values; a direct
-  alignment with their personal beliefs leading to loyalty and action without incentive.",
+  levelDescription: "Characterized by a person's reflection using prior knowledge, experience, feeling and values; a direct alignment with their personal beliefs leading to loyalty and action without incentive.",
   actionDescription: "Define the action that represents this level for you/your company",
-  actionExamples: "1. A 6-year old loves Matilda because she saw herself in the character, so she relates to herseld and her
-  life experiences with Matilda.
+  actionExamples: "1. A 6-year old loves Matilda because she saw herself in the character, so she relates to herseld and her life experiences with Matilda.
                    2. My employees will tell anyone they meet about the company as though we are a family.
                    3. My costumers post about my products without me asking them to.",
   questionDescription: "List the Questions associated with those actions",
