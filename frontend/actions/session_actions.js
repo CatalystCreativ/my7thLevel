@@ -9,6 +9,7 @@ export const CLEAR_ALL_ERRORS = 'CLEAR_ALL_ERRORS';
 
 
 const receiveCurrentUser = user => {
+  debugger
   return {
     type: RECEIVE_CURRENT_USER,
     user
@@ -22,7 +23,7 @@ const logoutUser = () => {
 };
 
 const receiveSessionErrors = (errors) => {
-
+  debugger
   return {
     type: RECEIVE_SESSION_ERRORS,
     errors
@@ -30,7 +31,7 @@ const receiveSessionErrors = (errors) => {
 };
 
 const receiveUserErrors = (errors) => {
-
+  debugger
   return {
     type: RECEIVE_USER_ERRORS,
     errors
@@ -70,6 +71,8 @@ export const logout = () => dispatch => {
     .then(() => dispatch(logoutUser()))
     .fail(err => dispatch(receiveSessionErrors(err.responseJSON)));
 };
+
+
 
 export const signup = (user) => {
   return dispatch => {

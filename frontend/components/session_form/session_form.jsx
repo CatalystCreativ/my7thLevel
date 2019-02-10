@@ -9,8 +9,8 @@ class SessionForm extends React.Component {
     this.blankState = {
       email: '',
       password: '',
-      firstName: '',
-      lastName: '',
+      first_name: '',
+      last_name: '',
       organization: ''
     };
 
@@ -54,12 +54,12 @@ class SessionForm extends React.Component {
       <>
         <div className="form-group">
           <label htmlFor="first-name">First Name: </label>
-          <input type="text" className="form-control" placeholder="First Name" id="first-name" value={this.state.firstName} onChange={this.update('firstName')}/>
+          <input type="text" className="form-control" placeholder="First Name" id="first-name" value={this.state.first_name} onChange={this.update('first_name')}/>
         </div>
 
         <div className="form-group">
           <label htmlFor="last-name">Last Name: </label>
-          <input type="text" className="form-control" placeholder="Last Name" id="last-name" value={this.state.lastName} onChange={this.update('lastName')}/>
+          <input type="text" className="form-control" placeholder="Last Name" id="last-name" value={this.state.last_name} onChange={this.update('last_name')}/>
         </div>
 
         <div className="form-group">

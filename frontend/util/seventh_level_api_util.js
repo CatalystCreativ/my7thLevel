@@ -6,7 +6,6 @@ export const createSeventhLevel = (seventhLevelData) => {
   });
 };
 
-
 export const fetchSeventhLevel = (id) => {
   return $.ajax({
     method: 'GET',

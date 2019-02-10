@@ -9,6 +9,11 @@ class Api::SeventhLevelsController < ApplicationController
     render :show
   end
 
+  def show_most_recently_created
+    @seventh_level = current_user.seventh_levels.last
+    render :show
+  end
+
   def create
     @seventh_level = SeventhLevel.create(seventh_level_params)
     if @seventh_level.save

@@ -1,7 +1,7 @@
 import { LEVELS } from './variables';
 import LevelComponent from './home_content/level';
 import Core from './home_content/core';
-
+import React from 'react';
 
 class Home extends React.Component {
   constructor(props) {
