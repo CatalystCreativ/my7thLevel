@@ -20,6 +20,19 @@ class Home extends React.Component {
     this.props.processForm(this.state);
   }
 
+  handleSubmit(levelNum) {
+    const attributes = {
+      `action${levelNum}`: this.state[`action${levelNum}`],
+      `question${levelNum}`: this.state[`question${levelNum}`],
+      `goal${levelNum}`: this.state[`question${levelNum}`]
+    }
+
+    return (e) => {
+      e.preventDefault();
+      this.props.processForm(attributes)
+    }
+  }
+
   update(field) {
     return (e) => {
       this.setState({ [field]: e.target.value });

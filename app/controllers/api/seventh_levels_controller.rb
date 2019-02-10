@@ -21,6 +21,8 @@ class Api::SeventhLevelsController < ApplicationController
   def update
     @seventh_level = SeventhLevel.find(params[:id])
     if @seventh_level.update(seventh_level_params)
+      if @seventh_level.update_attribute([attr]: seventh_level_params[attr])
+      update_attributes/update_attribute
       render json: @seventh_level
     else
       render json: @seventh_level.errors.full_messages, status: 422
@@ -30,6 +32,7 @@ class Api::SeventhLevelsController < ApplicationController
   private
 
   def seventh_levels_params
+    # Possibly add attr param for specific attribute updating
     params.require(:seventh_level).permit(
     :phrase,
     :core1,

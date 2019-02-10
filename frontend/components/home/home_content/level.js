@@ -6,12 +6,13 @@ class Level extends React.Component {
   }
 
   render() {
+    // EX RETURN OBJ = {action${levelInfo.levelNum}: action.value}
     const levelInfo = this.props.levelInfo;
     const levelConsts = this.props.levelConsts;
     const handleSubmit = this.props.handleSubmit;
     const update = this.props.update;
     return (
-      <form onSubmit={handleSubmit} className="">
+      <form onSubmit={handleSubmit()} className="">
         {levelConsts.levelNum}
         {levelConsts.levelTitle}
         <div>{levelConsts.levelDescription}</div>
@@ -30,6 +31,7 @@ class Level extends React.Component {
             value={this.state.email}
             onChange={this.update(`action${this.props.levelNum}`)}/>
         </div>
+      </form>
     );
   }
 }
