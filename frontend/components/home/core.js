@@ -12,7 +12,7 @@ class Core extends React.Component {
     // NEEDS UPDATE FOR LEVEL
     return (
       <form onSubmit={this.handleSubmit} className="">
-        {core.core1}
+        {CORE.core1}
         <div>{this.level.levelDescription}</div>
 
         <div className="~~~~~">
