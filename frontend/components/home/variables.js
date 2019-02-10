@@ -58,8 +58,7 @@ const LEVEL_TWO = {
 const LEVEL_THREE = {
   levelNum: "3",
   levelTitle: "FRUSTRATED ENGAGEMENT",
-  levelDescription: "Characterized by a person's interest and understanding of your message, but loss of interest due to
-  distraction or inability to complete a task.",
+  levelDescription: "Characterized by a person's interest and understanding of your message, but loss of interest due to distraction or inability to complete a task.",
   actionDescription: "Define the action that represents this level for you/your company",
   actionExamples: [
     "1. A 6-year old is in interested in their assignment until they can't use their favorite marker.",
