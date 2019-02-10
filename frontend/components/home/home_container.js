@@ -5,7 +5,7 @@ import { fetchSeventhLevel } from '../../actions/session_actions';
 const msp = ({ entities, errors }, ownProps) => {
   return {
     errors: errors.session,
-    seventhLevel: entities.seventhLevels[ownProps.match.params.seventhLeveLId]
+    seventhLevel: entities.seventhLevels[ownProps.match.params.seventhLevelId]
   };
 };
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import { Route } from 'react-router-dom';
 import GreetingContainer from './greeting/greeting_container';
+import HomeContainer from './home/home_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import SplashPage from './splash_page/splash_page';
@@ -13,6 +14,7 @@ const App = () => {
         <GreetingContainer />
       </header>
       <Route exact path="/" component={SplashPage} />
+      <ProtectedRoute path="/home/:seventhLevelId" component={HomeContainer} />
       <Route path="/login" component={LoginFormContainer} />
       <Route path="/signup" component={SignupFormContainer} />
     </div>

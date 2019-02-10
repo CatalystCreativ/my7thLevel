@@ -40,8 +40,8 @@ const LEVEL_ONE = {
 const LEVEL_TWO = {
   levelNum: "2",
   levelTitle: "UNSYSTEMATIC ENGAGEMENT",
-  levelDescription: "Characterized by a person's confusion and feelings
-  of inadequency; they don't understand an element of your message so they give up quickly."
+  levelDescription: "Characterized by a person\'s confusion and feelings
+  of inadequency\; they don't understand an element of your message so they give up quickly.",
   actionDescription: "Define the action that represents this level for you/your company",
   actionExamples: "1. A 6-year old doesn't raise their hand in class because they don't understand the question.
                    2. I can see people read my email, but no one reached out for more information.
