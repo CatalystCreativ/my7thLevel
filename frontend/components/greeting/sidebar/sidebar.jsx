@@ -14,16 +14,16 @@ class Sidebar extends React.Component {
   }
 
   render() {
-    const seventhLevels = this.props.seventhLevels.map(seventhLevel do {
+    const seventhLevels = this.props.seventhLevels.map(seventhLevel => {
       return (
         <Link to={`/seventh_levels/${seventhLevel.id}`}>{seventhLevel.title}</Link>
-      )
-    })
+      );
+    });
     return (
       <ul>
         {seventhLevels}
       </ul>
-    )
+    );
   }
 }
 

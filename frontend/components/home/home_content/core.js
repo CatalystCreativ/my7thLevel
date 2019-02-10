@@ -1,18 +1,18 @@
+import { CORE } from '../variables';
 import React from 'react';
 
-class Level extends React.Component {
+class Core extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.props.handleSubmit;
     this.update = this.props.updateField;
-    this.level = this.props.level;
   }
 
   render() {
+    // NEEDS UPDATE FOR LEVEL
     return (
       <form onSubmit={this.handleSubmit} className="">
-        {this.level.levelNum}
-        {this.level.levelTitle}
+        {CORE.core1}
         <div>{this.level.levelDescription}</div>
 
         <div className="~~~~~">
@@ -29,10 +29,10 @@ class Level extends React.Component {
             placeholder="Email Address"
             id="email"
             value={this.state.email}
-            onChange={this.update(`action${this.props.levelNum}`)}/>
+            onChange={this.update(`action${this.props.core}`)}/>
         </div>
     );
   }
 }
 
-export default Level;
+export default Core;

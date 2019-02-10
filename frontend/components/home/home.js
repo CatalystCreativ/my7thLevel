@@ -1,4 +1,5 @@
 import { LEVELS } from './variables';
+import LevelComponent from './home_content/levels';
 import Core from './core';
 
 
@@ -8,6 +9,10 @@ class Home extends React.Component {
     this.state = this.props.seventhLevel;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
+  }
+
+  componentDidMount() {
+    this.props.fetchSeventhLevel(this.props.seventhLevelId);
   }
 
   handleSubmit(e) {
@@ -34,35 +39,39 @@ class Home extends React.Component {
         <LevelComponent
           update={this.update}
           handleSubmit={this.handleSubmit}
-          level={LEVELS[i]}/>
+          levelConsts={LEVELS[i]}
+          levelInfo={LEVELS[i + 1]}
+          />
       );
     }
 
     const stage2 = [];
     for(let i = 3; i < 5; i++) {
-      const level = `level${i}`;
       stage2.push(
         <LevelComponent
           update={this.update}
           handleSubmit={this.handleSubmit}
-          level={LEVELS[i]}/>
+          levelConsts={LEVELS[i]}
+          levelInfo={LEVELS[i + 1]}
+          />
       );
     }
 
     const stage3 = [];
     for(let i = 5; i < 7; i++) {
-      const level = `level${i}`;
       stage3.push(
         <LevelComponent
           update={this.update}
           handleSubmit={this.handleSubmit}
-          level={LEVELS[i]}/>
+          levelConsts={LEVELS[i]}
+          levelInfo={LEVELS[i + 1]}
+          />
       );
     }
 
     return(
       <div>
-        <form onClick={this.handleSubmit}>
+        <form class="" onClick={this.handleSubmit}>
           <input type="text" value={this.state.title}></input>
           <button></button>
         </form>
@@ -72,17 +81,17 @@ class Home extends React.Component {
           {core}
         </div>
         <div>
-          <h2>Stage1</h2>
+          <h2>Stage 1</h2>
           {stage1}
         </div>
 
         <div>
-          <h2>Stage2</h2>
+          <h2>Stage 2</h2>
           {stage2}
         </div>
 
         <div>
-          <h2>Stage3</h2>
+          <h2>Stage 3</h2>
           {stage3}
         </div>
       </div>

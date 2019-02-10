@@ -1,11 +1,80 @@
 import { connect } from 'react-redux';
 import Home from './home';
-import { fetchSeventhLevel } from '../../actions/session_actions';
+import { fetchSeventhLevel } from '../../actions/seventh_level_actions';
 
 const msp = ({ entities, errors }, ownProps) => {
+  const seventhLevelId = ownProps.match.params.seventhLevelId;
+
+  const curSeventhLevel = entities.seventhLevels[id];
+
+  const core = {
+    phrase: curSeventhLevel.phrase,
+    core1: curSeventhLevel.core1,
+    core2: curSeventhLevel.core2,
+    core3: curSeventhLevel.core3,
+    core4: curSeventhLevel.core4,
+    core5: curSeventhLevel.core5
+  };
+
+  const level1 = {
+    action: curSeventhLevel.action1,
+    question: curSeventhLevel.question1,
+    goal: curSeventhLevel.goal1
+  };
+
+  const level2 = {
+    action: curSeventhLevel.action2,
+    question: curSeventhLevel.question2,
+    goal: curSeventhLevel.goal2
+  };
+
+  const level3 = {
+    action: curSeventhLevel.action3,
+    question: curSeventhLevel.question3,
+    goal: curSeventhLevel.goal3
+  };
+
+  const level4 = {
+    action: curSeventhLevel.action4,
+    question: curSeventhLevel.question4,
+    goal: curSeventhLevel.goal4
+  };
+
+  const level5 = {
+    action: curSeventhLevel.action5,
+    question: curSeventhLevel.question5,
+    goal: curSeventhLevel.goal5
+  };
+
+  const level6 = {
+    action: curSeventhLevel.action6,
+    question: curSeventhLevel.question6,
+    goal: curSeventhLevel.goal6
+  };
+
+  const level7 = {
+    action: curSeventhLevel.action7,
+    question: curSeventhLevel.question7,
+    goal: curSeventhLevel.goal7
+  };
+
+  const seventhLevel = [
+    core,
+    level1,
+    level2,
+    level3,
+    level4,
+    level5,
+    level6,
+    level7
+  ];
+
   return {
     errors: errors.session,
-    seventhLevel: entities.seventhLevels[ownProps.match.params.seventhLevelId]
+    seventhLevelId,
+    title: curSeventhLevel.title,
+    seventhLevel,
+    notes: curSeventhLevel.notes,
   };
 };
 

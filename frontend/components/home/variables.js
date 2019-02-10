@@ -1,20 +1,10 @@
-//Levels array
-export const LEVELS = [
-  LEVEL_ONE,
-  LEVEL_TWO,
-  LEVEL_THREE,
-  LEVEL_FOUR,
-  LEVEL_FIVE,
-  LEVEL_SIX,
-  LEVEL_SEVEN
-];
-
 // CORE QUESTIONS
 export const CORE = {
   core1: "WHO ARE YOU?",
   core2: "WHAT DO YOU STAND FOR?",
   core3: "WHAT DO YOU BELIEVE?",
   core4: "WHAT IS YOUR NARRATIVE?",
+
   core5: "WHY DO YOU EXIST",
   phrase: "WHAT IS YOUR SEVENTH LEVEL PHRASE OR PURPOSE?"
 };
@@ -151,3 +141,14 @@ const LEVEL_SEVEN = {
                  2. Develop an outreach program to thank raving fans.
                  3. Share user-generated content.",
 };
+
+//Levels array
+export const LEVELS = [
+  LEVEL_ONE,
+  LEVEL_TWO,
+  LEVEL_THREE,
+  LEVEL_FOUR,
+  LEVEL_FIVE,
+  LEVEL_SIX,
+  LEVEL_SEVEN
+];
