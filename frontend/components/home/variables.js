@@ -1,6 +1,5 @@
 //Levels array
 export const LEVELS = [
-  null,
   LEVEL_ONE,
   LEVEL_TWO,
   LEVEL_THREE,
