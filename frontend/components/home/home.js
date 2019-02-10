@@ -15,11 +15,6 @@ class Home extends React.Component {
     this.props.fetchSeventhLevel(this.props.seventhLevelId);
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    this.props.processForm(this.state);
-  }
-
   handleSubmit(levelNum) {
     const attributes = {
       `action${levelNum}`: this.state[`action${levelNum}`],
