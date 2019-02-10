@@ -31,6 +31,7 @@ class Core extends React.Component {
             value={this.state.email}
             onChange={this.update(`action${this.props.core}`)}/>
         </div>
+      </form>
     );
   }
 }

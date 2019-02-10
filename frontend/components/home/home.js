@@ -1,6 +1,6 @@
 import { LEVELS } from './variables';
-import LevelComponent from './home_content/levels';
-import Core from './core';
+import LevelComponent from './home_content/level';
+import Core from './home_content/core';
 
 
 class Home extends React.Component {
@@ -16,16 +16,16 @@ class Home extends React.Component {
   }
 
   handleSubmit(levelNum) {
-    const attributes = {
-      `action${levelNum}`: this.state[`action${levelNum}`],
-      `question${levelNum}`: this.state[`question${levelNum}`],
-      `goal${levelNum}`: this.state[`question${levelNum}`]
-    }
-
-    return (e) => {
-      e.preventDefault();
-      this.props.processForm(attributes)
-    }
+    // const attributes = {
+    //   `action${levelNum}`: this.state[`action${levelNum}`],
+    //   `question${levelNum}`: this.state[`question${levelNum}`],
+    //   `goal${levelNum}`: this.state[`question${levelNum}`]
+    // }
+    //
+    // return (e) => {
+      // e.preventDefault();
+      // this.props.processForm(attributes)
+    // }
   }
 
   update(field) {
