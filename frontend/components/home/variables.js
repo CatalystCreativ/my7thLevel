@@ -35,8 +35,7 @@ const LEVEL_ONE = {
 const LEVEL_TWO = {
   levelNum: "2",
   levelTitle: "UNSYSTEMATIC ENGAGEMENT",
-  levelDescription: "Characterized by a person\'s confusion and feelings
-  of inadequency\; they don't understand an element of your message so they give up quickly.",
+  levelDescription: "Characterized by a person\'s confusion and feelings of inadequency\; they don't understand an element of your message so they give up quickly.",
   actionDescription: "Define the action that represents this level for you/your company",
   actionExamples: [
     "1. A 6-year old doesn't raise their hand in class because they don't understand the question.",
@@ -70,7 +69,7 @@ const LEVEL_THREE = {
   ],
   questionDescription: "List the Questions associated with those actions",
   questionExamples: [
-    "1. Are their too many steps or are the steps to join too difficult?,"
+    "1. Are their too many steps or are the steps to join too difficult?",
     "2. Does my website load quickly enough?",
     "3. Am I rarely available when my friends aske me to join them for activities?"
   ],
@@ -134,7 +133,7 @@ const LEVEL_FIVE = {
 const LEVEL_SIX = {
   levelNum: "6",
   levelTitle: "CRITICAL ENGAGEMENT",
-  levelDescription: "Characterized by a person's inspiration to make a change in their own life; taking a personal action to set goals and transform their lives to achieve an objective based on a message or interaction."
+  levelDescription: "Characterized by a person's inspiration to make a change in their own life; taking a personal action to set goals and transform their lives to achieve an objective based on a message or interaction.",
   actionDescription: "Define the action that represents this level for you/your company",
   actionExamples: [
   "1. A 6-year old who learns how sea turtles are affected by plastic in the ocean and recycles for the rest of their life.",
