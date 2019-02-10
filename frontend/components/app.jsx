@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import { ProtectedRoute, AuthRoute } from '../util/route_util';
 import GreetingContainer from './greeting/greeting_container';
 import HomeContainer from './home/home_container';
+import ShowContainer from './home/show_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import SplashPage from './splash_page/splash_page';
@@ -15,7 +16,8 @@ const App = () => {
         <GreetingContainer />
       </header>
       <Route exact path="/" component={SplashPage} />
-      <ProtectedRoute path="/home/:seventhLevelId" component={HomeContainer} />
+      <ProtectedRoute path="/home" component={HomeContainer} />
+      <ProtectedRoute path="/home/:seventhLevelId" component={ShowContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
     </div>

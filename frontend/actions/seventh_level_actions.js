@@ -34,6 +34,11 @@ export const fetchSeventhLevel = (id) => dispatch => {
     .then((seventhLevel) => dispatch(receiveSeventhLevel(seventhLevel)));
 };
 
+export const fetchNewestSeventhLevel = () => dispatch => {
+  return SeventhLevelAPIUtil.fetchNewestSeventhLevel()
+    .then((seventhLevel) => dispatch(receiveSeventhLevel(seventhLevel)));
+};
+
 export const fetchSeventhLevels = () => dispatch => {
   return SeventhLevelAPIUtil.fetchSeventhLevels()
     .then((seventhLevels) => dispatch(receiveSeventhLevels(seventhLevels)));

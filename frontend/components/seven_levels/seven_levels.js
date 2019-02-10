@@ -3,7 +3,7 @@ import LevelComponent from './home_content/level';
 import Core from './home_content/core';
 import React from 'react';
 
-class Home extends React.Component {
+class SevenLevels extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props.seventhLevel;
@@ -107,4 +107,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default SevenLevels;

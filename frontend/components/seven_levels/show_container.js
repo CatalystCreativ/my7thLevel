@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import Home from './home';
+import SevenLevels from './seven_levels';
 import { fetchSeventhLevel } from '../../actions/seventh_level_actions';
 
 const msp = ({ entities, errors }, ownProps) => {
@@ -83,4 +83,4 @@ const mdp = (dispatch) => {
   };
 };
 
-export default connect(msp, mdp)(Home);
+export default connect(msp, mdp)(SevenLevels);

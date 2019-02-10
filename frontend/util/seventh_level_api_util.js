@@ -13,6 +13,13 @@ export const fetchSeventhLevel = (id) => {
   });
 };
 
+export const fetchNewestSeventhLevel = () => {
+  return $.ajax({
+    method: 'GET',
+    url: `api/home`
+  });
+};
+
 export const fetchSeventhLevels = () => {
   return $.ajax({
     method: 'GET',
