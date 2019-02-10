@@ -1,6 +1,8 @@
 @seventh_levels.each do |seventh_level|
   json.set! seventh_level.id do
-    json.extract! seventh_level, :phrase,
+    json.extract! seventh_level, 
+    :phrase,
+    :title,
     :core1,
     :core2,
     :core3,
