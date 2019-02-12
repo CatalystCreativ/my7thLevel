@@ -26,8 +26,9 @@ class Api::SeventhLevelsController < ApplicationController
   def update
     @seventh_level = SeventhLevel.find(params[:id])
     if @seventh_level.update(seventh_level_params)
-      if @seventh_level.update_attribute([attr]: seventh_level_params[attr])
-      update_attributes/update_attribute
+      # if @seventh_level.update_attribute([attr]: seventh_level_params[attr])
+      # update_attributes/update_attribute
+      # commented this out for now because it was giving errors - Jess 
       render json: @seventh_level
     else
       render json: @seventh_level.errors.full_messages, status: 422
@@ -67,7 +68,8 @@ class Api::SeventhLevelsController < ApplicationController
     :question7,
     :goal7,
     :user_id,
-    :notes)
+    :notes,
+    :title)
   end
 
 end
