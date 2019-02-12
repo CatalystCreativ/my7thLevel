@@ -10,7 +10,7 @@ class Api::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      @user.seventh_levels += SeventhLevel.create({
+      @user.seventh_levels += [SeventhLevel.create({
         :title => '',
         :phrase => '',
         :core1 => '',
@@ -41,7 +41,7 @@ class Api::UsersController < ApplicationController
         :goal7 => '',
         :user_id => @user.id,
         :notes => ''
-      })
+      })]
       login(@user)
       render 'api/users/show'
     else

@@ -1025,3 +1025,156 @@ Completed 200 OK in 273ms (Views: 267.4ms | ActiveRecord: 1.2ms)
   [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mSeventhLevel Load (1.6ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels"[0m
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for 127.0.0.1 at 2019-02-12 18:06:22 -0500
+  [1m[35m (7.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/avichaivazana/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (19.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "aco9DQIeqdu3zh-Ck-hkDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (5.9ms)
+  Rendered static_page/root.html.erb within layouts/application (149.6ms)
+Completed 200 OK in 4439ms (Views: 4360.4ms | ActiveRecord: 74.9ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2019-02-12 18:06:33 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "aco9DQIeqdu3zh-Ck-hkDw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (11.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (2.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "avisvazana@gmail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (31.7ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "I2e3MXzjfLd985Y6gxH6LQ"], ["updated_at", "2019-02-12 23:06:33.279780"], ["id", 1]]
+  ↳ app/models/user.rb:36
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+Completed 200 OK in 69ms (Views: 0.5ms | ActiveRecord: 49.0ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2019-02-12 18:06:38 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"test", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "organization"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2019-02-12 18:06:43 -0500
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "organization"=>""}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@test.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "qsbi4Ap1qHKZ5A2vSCVrZg"], ["updated_at", "2019-02-12 23:06:43.983409"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered api/users/show.json.jbuilder (2.9ms)
+Completed 200 OK in 116ms (Views: 16.6ms | ActiveRecord: 5.4ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2019-02-12 18:06:51 -0500
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qsbi4Ap1qHKZ5A2vSCVrZg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test@test.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (3.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "WCQm5oZpxs257S7H7JKvNg"], ["updated_at", "2019-02-12 23:06:51.749981"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2019-02-12 18:07:08 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"test5", "password"=>"[FILTERED]", "first_name"=>"test5", "last_name"=>"test5", "organization"=>"test5"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test5"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (11.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:12
+Completed 422 Unprocessable Entity in 7376ms (Views: 0.3ms | ActiveRecord: 12.5ms)
+
+
+Started POST "/api/users" for 127.0.0.1 at 2019-02-12 18:08:34 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"test10", "password"=>"[FILTERED]", "first_name"=>"test10", "last_name"=>"test10", "organization"=>"test10"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test10"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Create (5.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at", "organization") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "test10"], ["last_name", "test10"], ["email", "test10"], ["password_digest", "$2a$10$bEwmPcj4lbb42Y.NokBecOTWy2s2owGzEMUDp3ENOLyFugfT3Umoa"], ["session_token", "7LMrUTDGzeeUFAmEdSRdFQ"], ["created_at", "2019-02-12 23:09:14.996896"], ["updated_at", "2019-02-12 23:09:14.996896"], ["organization", "test10"]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mSeventhLevel Create (20.3ms)[0m  [1m[32mINSERT INTO "seventh_levels" ("phrase", "core1", "core2", "core3", "core4", "core5", "action1", "question1", "goal1", "action2", "question2", "goal2", "action3", "question3", "goal3", "action4", "question4", "goal4", "action5", "question5", "goal5", "action6", "question6", "goal6", "action7", "question7", "goal7", "user_id", "created_at", "updated_at", "notes", "title") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32) RETURNING "id"[0m  [["phrase", ""], ["core1", ""], ["core2", ""], ["core3", ""], ["core4", ""], ["core5", ""], ["action1", ""], ["question1", ""], ["goal1", ""], ["action2", ""], ["question2", ""], ["goal2", ""], ["action3", ""], ["question3", ""], ["goal3", ""], ["action4", ""], ["question4", ""], ["goal4", ""], ["action5", ""], ["question5", ""], ["goal5", ""], ["action6", ""], ["question6", ""], ["goal6", ""], ["action7", ""], ["question7", ""], ["goal7", ""], ["user_id", 3], ["created_at", "2019-02-12 23:09:15.163047"], ["updated_at", "2019-02-12 23:09:15.163047"], ["notes", ""], ["title", ""]]
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mSeventhLevel Load (1.0ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/api/users_controller.rb:13
+Completed 500 Internal Server Error in 40296ms (ActiveRecord: 42.4ms)
+
+
+
+TypeError - can't convert SeventhLevel to Array (SeventhLevel#to_ary gives NilClass):
+  app/controllers/api/users_controller.rb:13:in `create'
+
+Started POST "/api/users" for 127.0.0.1 at 2019-02-12 18:12:06 -0500
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"test15", "password"=>"[FILTERED]", "first_name"=>"test15", "last_name"=>"test15", "organization"=>"test15"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test15"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at", "organization") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "test15"], ["last_name", "test15"], ["email", "test15"], ["password_digest", "$2a$10$bfjfK70m/v8HRR7aHlo4JOwmHkGc9Iu7bWNwIk84sAzIhJT8arcQS"], ["session_token", "T0M5v3rKFb7VZ3hMNfIqXA"], ["created_at", "2019-02-12 23:12:11.272236"], ["updated_at", "2019-02-12 23:12:11.272236"], ["organization", "test15"]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mSeventhLevel Create (2.6ms)[0m  [1m[32mINSERT INTO "seventh_levels" ("phrase", "core1", "core2", "core3", "core4", "core5", "action1", "question1", "goal1", "action2", "question2", "goal2", "action3", "question3", "goal3", "action4", "question4", "goal4", "action5", "question5", "goal5", "action6", "question6", "goal6", "action7", "question7", "goal7", "user_id", "created_at", "updated_at", "notes", "title") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32) RETURNING "id"[0m  [["phrase", ""], ["core1", ""], ["core2", ""], ["core3", ""], ["core4", ""], ["core5", ""], ["action1", ""], ["question1", ""], ["goal1", ""], ["action2", ""], ["question2", ""], ["goal2", ""], ["action3", ""], ["question3", ""], ["goal3", ""], ["action4", ""], ["question4", ""], ["goal4", ""], ["action5", ""], ["question5", ""], ["goal5", ""], ["action6", ""], ["question6", ""], ["goal6", ""], ["action7", ""], ["question7", ""], ["goal7", ""], ["user_id", 4], ["created_at", "2019-02-12 23:12:11.354147"], ["updated_at", "2019-02-12 23:12:11.354147"], ["notes", ""], ["title", ""]]
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mSeventhLevel Load (0.7ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "test15"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (2.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "FfcsE7_nFEjrkCy6jin31g"], ["updated_at", "2019-02-12 23:12:11.372414"], ["id", 4]]
+  ↳ app/models/user.rb:36
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered api/users/show.json.jbuilder (3.6ms)
+Completed 200 OK in 4291ms (Views: 14.5ms | ActiveRecord: 46.4ms)
+
+
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mSeventhLevel Load (1.1ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."user_id" = $1[0m  [["user_id", 4]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mSeventhLevel Load (0.8ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."user_id" = $1[0m  [["user_id", 3]]

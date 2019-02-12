@@ -1,6 +1,6 @@
 import { LEVELS } from './variables';
-import LevelComponent from './home_content/level';
-import Core from './home_content/core';
+import LevelComponent from './seven_levels_content/level';
+import Core from './seven_levels_content/core';
 import React from 'react';
 
 class SevenLevels extends React.Component {
