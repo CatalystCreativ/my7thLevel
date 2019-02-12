@@ -39,7 +39,7 @@ class Api::UsersController < ApplicationController
         :action7 => '',
         :question7 => '',
         :goal7 => '',
-        :user_id => '',
+        :user_id => @user.id,
         :notes => ''
       })
       login(@user)
