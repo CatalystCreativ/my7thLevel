@@ -23,3 +23,5 @@ bundle.js.map
 /config/master.key
 
 .DS_Store
+log/development.log
+tmp/cache/bootsnap-load-path-cache
