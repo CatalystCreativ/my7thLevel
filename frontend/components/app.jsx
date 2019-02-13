@@ -16,7 +16,7 @@ const App = () => {
         <GreetingContainer />
       </header>
       <Route exact path="/" component={SplashPage} />
-      <ProtectedRoute path="/home" component={HomeContainer} />
+      <ProtectedRoute exact path="/home" component={HomeContainer} />
       <ProtectedRoute path="/home/:seventhLevelId" component={ShowContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
