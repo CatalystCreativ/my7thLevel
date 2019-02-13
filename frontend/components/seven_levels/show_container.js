@@ -4,7 +4,7 @@ import { fetchSeventhLevel } from '../../actions/seventh_level_actions';
 
 const msp = ({ entities, errors }, ownProps) => {
   const seventhLevelId = ownProps.match.params.seventhLevelId;
-  const curSeventhLevel = entities.seventhLevels[id];
+  const curSeventhLevel = entities.seventhLevels[seventhLevelId];
 
   const core = {
     phrase: curSeventhLevel.phrase,
