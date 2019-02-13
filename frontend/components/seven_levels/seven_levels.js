@@ -45,6 +45,7 @@ class SevenLevels extends React.Component {
     for(let i = 0; i < 3; i++) {
       stage1.push(
         <LevelComponent
+          key={i}
           update={this.update}
           handleSubmit={this.handleSubmit}
           levelConsts={LEVELS[i]}
@@ -57,6 +58,7 @@ class SevenLevels extends React.Component {
     for(let i = 3; i < 5; i++) {
       stage2.push(
         <LevelComponent
+          key={i}
           update={this.update}
           handleSubmit={this.handleSubmit}
           levelConsts={LEVELS[i]}
@@ -69,6 +71,7 @@ class SevenLevels extends React.Component {
     for(let i = 5; i < 7; i++) {
       stage3.push(
         <LevelComponent
+          key={i}
           update={this.update}
           handleSubmit={this.handleSubmit}
           levelConsts={LEVELS[i]}
@@ -79,7 +82,7 @@ class SevenLevels extends React.Component {
 
     return(
       <div>
-        <form class="" onClick={this.handleSubmit}>
+        <form className="" onClick={this.handleSubmit}>
           <input type="text" value={this.state.title}></input>
           <button></button>
         </form>
