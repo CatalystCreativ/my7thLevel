@@ -11,7 +11,7 @@ export const CORE = {
 //Stage 1: ATTRACT
 const LEVEL_ONE = {
   levelNum: "1",
-  levelTitle: "Disengagement",
+  levelTitle: "DISENGAGEMENT",
   levelDescription: "Characterized by a person showing disinterest; they're completely idle and avoid tasks,interactions or attempts at communication",
   actionDescription: "Define the action that represents this level for you/your company",
   actionExamples: [
