@@ -6,7 +6,7 @@ import React from 'react';
 class SevenLevels extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.seventhLevel;
+    this.state = { seventhLevel: this.props.seventhLevel };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
