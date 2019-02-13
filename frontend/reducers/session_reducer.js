@@ -10,7 +10,6 @@ const _nullUser = {
 };
 
 const SessionReducer = (state = {}, action) => {
-  debugger
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       let currentUser = action.currentUser;
