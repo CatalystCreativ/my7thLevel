@@ -9,7 +9,6 @@ export const CLEAR_ALL_ERRORS = 'CLEAR_ALL_ERRORS';
 
 
 export const receiveCurrentUser = currentUser => {
-  debugger
   return ({
     type: RECEIVE_CURRENT_USER,
     currentUser
@@ -23,7 +22,6 @@ const logoutUser = () => {
 };
 
 const receiveSessionErrors = (errors) => {
-  debugger
   return {
     type: RECEIVE_SESSION_ERRORS,
     errors
@@ -31,7 +29,6 @@ const receiveSessionErrors = (errors) => {
 };
 
 const receiveUserErrors = (errors) => {
-  debugger
   return {
     type: RECEIVE_USER_ERRORS,
     errors
@@ -47,7 +44,6 @@ export const clearAllErrors = () => {
 
 // THUNK
 export const login = user => dispatch => {
-  debugger
   return (
     SessionAPIUtil.login(user).then(user => (
       dispatch(receiveCurrentUser(user))
