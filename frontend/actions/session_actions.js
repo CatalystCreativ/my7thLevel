@@ -8,12 +8,12 @@ export const RECEIVE_USER_ERRORS = 'RECEIVE_USER_ERRORS';
 export const CLEAR_ALL_ERRORS = 'CLEAR_ALL_ERRORS';
 
 
-const receiveCurrentUser = user => {
+export const receiveCurrentUser = currentUser => {
   debugger
-  return {
+  return ({
     type: RECEIVE_CURRENT_USER,
-    user
-  };
+    currentUser
+    });
 };
 
 const logoutUser = () => {
@@ -46,12 +46,16 @@ export const clearAllErrors = () => {
 
 
 // THUNK
-export const login = (user) => dispatch => {
-  return SessionAPIUtil.login(user)
-    .then(user => dispatch(receiveCurrentUser(user)))
-    .fail(err => dispatch(receiveSessionErrors(err.responseJSON)));
+export const login = user => dispatch => {
+  debugger
+  return (
+    SessionAPIUtil.login(user).then(user => (
+      dispatch(receiveCurrentUser(user))
+    ), err => (
+      dispatch(receiveErrors(err.responseJSON))
+    ))
+  );
 };
-
 // export const login = (user) => async dispatch => {
 //   debugger
 //   let response;
