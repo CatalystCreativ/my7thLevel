@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SevenLevels from './seven_levels';
-import { fetchSeventhLevel } from '../../actions/seventh_level_actions';
+import { fetchNewestSeventhLevel } from '../../actions/seventh_level_actions';
 
 const msp = ({ entities, errors }, ownProps) => {
   const seventhLevelId = ownProps.match.params.seventhLevelId;
