@@ -15,7 +15,7 @@ class Api::SeventhLevelsController < ApplicationController
   end
 
   def create
-    @seventh_level = SeventhLevel.create(seventh_level_params)
+    @seventh_level = current_user.seventh_levels.new(seventh_level_params)
     if @seventh_level.save
       render :show
     else
@@ -67,7 +67,6 @@ class Api::SeventhLevelsController < ApplicationController
     :action7,
     :question7,
     :goal7,
-    :user_id,
     :notes,
     :title)
   end
