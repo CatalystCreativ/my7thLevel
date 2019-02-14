@@ -9,7 +9,7 @@ const Auth = ({component: Component, path, loggedIn, newestSeventhLevelId, exact
       !loggedIn ? (
         <Component {...props} />
       ) : (
-        <Redirect to=`/home/${newestSeventhLevelId}` />
+        <Redirect to={`/home/${newestSeventhLevelId}`} />
       )
     )}/>
   )

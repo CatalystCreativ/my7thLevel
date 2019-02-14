@@ -14,7 +14,7 @@ class Core extends React.Component {
     const core = [core1, core2, core3, core4, core5, phrase];
     CORE.map((question, idx) => {
       core.push(
-        <div id=`question${idx}`>
+        <div id={`question${idx}`}>
           <div className="card col-5">
             <div className="card-header">
               {question}
