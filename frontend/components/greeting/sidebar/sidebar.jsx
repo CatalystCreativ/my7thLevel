@@ -7,10 +7,15 @@ class Sidebar extends React.Component {
   constructor(props) {
     super(props);
     this.fetchSeventhLevels = this.props.fetchSeventhLevels;
+    this.createSeventhLevel = this.props.createSeventhLevel;
   }
 
   componentDidMount() {
     this.fetchSeventhLevels();
+  }
+
+  newSeventhLevel() {
+    this.createSeventhLevel().then((seventhLevel) => this.props.history.push(`/home/${seventhLevel.id}`));
   }
 
   render() {
@@ -21,6 +26,7 @@ class Sidebar extends React.Component {
     });
     return (
       <ul>
+        <button onClick={this.newSeventhLevel}>New Seventh Level</button>
         {seventhLevels}
       </ul>
     );

@@ -2,6 +2,7 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @seventh_level = @user.seventh_levels.last
     render :show
   end
 

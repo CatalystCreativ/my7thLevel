@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Sidebar from './sidebar';
-import { fetchSeventhLevels } from '../../actions/session_actions';
+import { fetchSeventhLevels, createSeventhLevel } from '../../actions/session_actions';
 
 const mapStateToProps = ({ entities, session }) => {
   return {
@@ -10,7 +10,9 @@ const mapStateToProps = ({ entities, session }) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchSeventhLevels: () => dispatch(fetchSeventhLevels())
+    fetchSeventhLevels: () => dispatch(fetchSeventhLevels()),
+    createSeventhLevel: () => dispatch(createSeventhLevel()),
+
   };
 };
 
