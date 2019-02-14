@@ -13,7 +13,8 @@ const SessionReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_CURRENT_USER:
       let currentUser = action.currentUser;
-      return Object.assign({}, state, {'currentUser': currentUser} );
+      let newestSeventhLevelId = currentUser.newestSeventhLevelId;
+      return Object.assign({}, state, {currentUser: currentUser.id, newestSeventhLevelId} );
     case LOGOUT_USER:
       return {};
     default:
