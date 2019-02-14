@@ -9,11 +9,28 @@ class Core extends React.Component {
   }
 
   render() {
-    // NEEDS UPDATE FOR LEVEL
+
+    const {core1, core2, core3, core4, core5, phrase} = this.props.core
+    const core = [core1, core2, core3, core4, core5, phrase];
+    CORE.map((question, idx) => {
+      core.push(
+        <div id=`question${idx}`>
+          <div className="card col-5">
+            <div className="card-header">
+              {question}
+            </div>
+            <div className="card-body">
+              <textarea className="w-200" name="" id="" cols="30" rows="10" value={core[idx]}></textarea>
+            </div>
+          </div>
+        </div>
+      );
+    });
+
     return (
-      <h1>
-        Core
-      </h1>
+      <div>
+        {core}
+      </div>
     );
   }
 }

@@ -38,6 +38,7 @@ class SevenLevels extends React.Component {
     const core = (
       <Core
         update={this.update}
+        core={this.state.core}
         handleSubmit={this.handleSubmit}/>
     );
 

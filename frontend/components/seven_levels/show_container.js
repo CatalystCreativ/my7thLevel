@@ -73,7 +73,6 @@ const msp = ({ entities, errors }, ownProps) => {
     seventhLevelId,
     title: curSeventhLevel.title,
     seventhLevel,
-    notes: curSeventhLevel.notes,
   };
 };
 
