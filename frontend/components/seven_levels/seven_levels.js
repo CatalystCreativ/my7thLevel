@@ -79,7 +79,6 @@ class SevenLevels extends React.Component {
       <div>
         <form className="" onClick={this.handleSubmit}>
           <input type="text" value={this.state.title}></input>
-          <button></button>
         </form>
 
         <div>
