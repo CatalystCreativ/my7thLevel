@@ -15,17 +15,11 @@ class SevenLevels extends React.Component {
     this.props.fetchSeventhLevel(this.props.seventhLevelId);
   }
 
-  handleSubmit(levelNum) {
-    // const attributes = {
-    //   `action${levelNum}`: this.state[`action${levelNum}`],
-    //   `question${levelNum}`: this.state[`question${levelNum}`],
-    //   `goal${levelNum}`: this.state[`question${levelNum}`]
-    // }
-    //
-    // return (e) => {
-      // e.preventDefault();
-      // this.props.processForm(attributes)
-    // }
+  handleSubmit() {
+    return (e) => {
+      e.preventDefault();
+      this.props.processForm(this.state);
+    };
   }
 
   update(field) {
