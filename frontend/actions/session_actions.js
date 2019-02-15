@@ -67,7 +67,6 @@ export const login = user => dispatch => {
 
 
 export const logout = () => dispatch => {
-  debugger
   return SessionAPIUtil.logout()
     .then(() => dispatch(logoutUser()))
     .fail(err => dispatch(receiveSessionErrors(err.responseJSON)));
