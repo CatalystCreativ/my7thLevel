@@ -44,3 +44,5 @@ seventh_level1 = SeventhLevel.create!(
   user_id: user1.id,
   notes: 'notes',
   title: 'title')
+  
+  user1.recent_seventh_level_id = user1.seventh_levels.last.id
