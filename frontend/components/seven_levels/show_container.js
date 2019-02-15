@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import SevenLevels from './seven_levels';
-import { fetchSeventhLevel } from '../../actions/seventh_level_actions';
+import { fetchSeventhLevel, updateSeventhLevel } from '../../actions/seventh_level_actions';
 
 const msp = ({ entities, errors }, ownProps) => {
   const seventhLevelId = ownProps.match.params.seventhLevelId;
@@ -16,6 +16,7 @@ const msp = ({ entities, errors }, ownProps) => {
 const mdp = (dispatch) => {
   return {
     fetchSeventhLevel: (id) => dispatch(fetchSeventhLevel(id)),
+    updateSeventhLevel: (data) => dispatch(updateSeventhLevel(data))
   };
 };
 
