@@ -3,9 +3,8 @@ import Greeting from './greeting';
 import { logout } from '../../actions/session_actions';
 
 const mapStateToProps = (state) => {
-  debugger
   return {
-    currentUser: Boolean(state.session.currentUser)
+    currentUser: Boolean(state.session.currentUserId)
   };
 };
 
