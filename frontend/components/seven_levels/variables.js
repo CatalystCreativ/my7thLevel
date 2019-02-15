@@ -19,7 +19,7 @@ const LEVEL_ONE = {
   actionDescription: "Define the action that represents this level for you/your company",
   actionExamples: [
     "A six year old ignores their teacher when they ask a question to the class.",
-    "My employee is not acknowleging or opening my emails.",
+    "My employee is not acknowledging or opening my emails.",
     "No one is clicking on our instagram ads."
   ],
   questionDescription: "List the Questions associated with those actions",
@@ -30,7 +30,7 @@ const LEVEL_ONE = {
   ],
   goalDescription: "Choose 1-2 goals for the next month or quarter",
   goalExamples: [
-    "Conduct an informal survey to find out whether my audience perfers emails or text messages.",
+    "Conduct an informal survey to find out whether my audience prefers emails or text messages.",
     "Test ads in three different platforms to determine the best option for reaching my audience."
   ]
 };
@@ -38,7 +38,7 @@ const LEVEL_ONE = {
 const LEVEL_TWO = {
   levelNum: "2",
   levelTitle: "UNSYSTEMATIC ENGAGEMENT",
-  levelDescription: "Characterized by a person\'s confusion and feelings of inadequency\; they don't understand an element of your message so they give up quickly.",
+  levelDescription: "Characterized by a person\'s confusion and feelings of inadequacy\; they don't understand an element of your message so they give up quickly.",
   actionDescription: "Define the action that represents this level for you/your company",
   actionExamples: [
     "A 6-year old doesn't raise their hand in class because they don't understand the question.",
@@ -73,7 +73,7 @@ const LEVEL_THREE = {
   questionExamples: [
     "Are their too many steps or are the steps to join too difficult?",
     "Does my website load quickly enough?",
-    "Am I rarely available when my friends aske me to join them for activities?"
+    "Am I rarely available when my friends asks me to join them for activities?"
   ],
   goalDescription: "Choose 1-2 goals for the next month or quarter",
   goalExamples: [
@@ -90,7 +90,7 @@ const LEVEL_FOUR = {
   actionDescription: "Define the action that represents this level for you/your company",
   actionExamples: [
     "A 6-year old who participates when their teacher asks, 'Raise your hand if you like candy.'.",
-    "My employees will attend a non-mandatory virtual training fo HR when askes to, but will not particapate.",
+    "My employees will attend a non-mandatory virtual training fo HR.",
     "My followers will like my post but not share it."
   ],
   questionDescription: "List the Questions associated with those actions",
@@ -115,7 +115,7 @@ const LEVEL_FIVE = {
   actionExamples: [
     "A 6-year old who participates in class to earn extra credit or a reward for completion.",
     "My employees will volunteer for a special project if they'll earn an extra vacation day.",
-    "People will comment on my post if they can win ticjets ti meet their favorite influencer."
+    "People will comment on my post if they can win tickets ti meet their favorite influencer."
   ],
   questionDescription: "List the Questions associated with those actions",
   questionExamples: [
@@ -125,9 +125,9 @@ const LEVEL_FIVE = {
   ],
   goalDescription: "Choose 1-2 goals for the next month or quarter",
   goalExamples: [
-    "Indentify the mutually beneficial narrative prior to any partnership to ensure that the partner is communicating the brand value to their audience in an integrative approach.",
+    "Identify the mutually beneficial narrative prior to any partnership to ensure that the partner is communicating the brand value to their audience in an integrative approach.",
     "Increase website traffic or email acquisition from partnership (incentives) channels.",
-    "Launch a program that pays for masters courses that align with company goals, to recieve that benefit employees must dedicate a certain number of years of service."
+    "Launch a program that pays for masters courses that align with company goals, to receive that benefit employees must dedicate a certain number of years of service."
 ]
 };
 
@@ -139,14 +139,14 @@ const LEVEL_SIX = {
   actionDescription: "Define the action that represents this level for you/your company",
   actionExamples: [
   "A 6-year old who learns how sea turtles are affected by plastic in the ocean and recycles for the rest of their life.",
-  "My team has committed to a weaght loss and health goal.",
+  "My team has committed to a weight loss and health goal.",
   "Our hotel is committed to sustainability and we hear stories of how our guests change their habits after staying in our property and seeing how we manage things.",
   "My mentor shared her story of how shortening her meetings to 45 minutes changed her work life and it inspired me to do the same."
 ],
   questionDescription: "List the Questions associated with those actions",
   questionExamples: [
     "What do I stand for?",
-    "Why does what I or my comany matter?",
+    "Why does what I or my company matter?",
     "How is our brand helping others?"
   ],
   goalDescription: "Choose 1-2 goals for the next month or quarter",
@@ -163,7 +163,7 @@ const LEVEL_SEVEN = {
   levelDescription: "Characterized by a person's reflection using prior knowledge, experience, feeling and values; a direct alignment with their personal beliefs leading to loyalty and action without incentive.",
   actionDescription: "Define the action that represents this level for you/your company",
   actionExamples: [
-    "A 6-year old loves Matilda because she saw herself in the character, so she relates to herseld and her life experiences with Matilda.",
+    "A 6-year old loves Matilda because she saw herself in the character, so she relates to herself and her life experiences with Matilda.",
     "My employees will tell anyone they meet about the company as though we are a family.",
     "My costumers post about my products without me asking them to."
   ],
