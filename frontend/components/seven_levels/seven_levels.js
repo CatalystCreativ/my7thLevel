@@ -6,7 +6,39 @@ import React from 'react';
 class SevenLevels extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.seventhLevel;
+    this.state = {
+      id: 0,
+      title: "",
+      phrase: "",
+      core1: "",
+      core2: "",
+      core3: "",
+      core4: "",
+      core5: "",
+      action1: "",
+      question1: "",
+      goal1: "",
+      action2: "",
+      question2: "",
+      goal2: "",
+      action3: "",
+      question3: "",
+      goal3: "",
+      action4: "",
+      question4: "",
+      goal4: "",
+      action5: "",
+      question5: "",
+      goal5: "",
+      action6: "",
+      question6: "",
+      goal6: "",
+      action7: "",
+      question7: "",
+      goal7: "",
+      user_id: 0,
+      notes: ""
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
   }
