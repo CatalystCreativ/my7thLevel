@@ -16,7 +16,7 @@ const App = () => {
         <GreetingContainer />
       </header>
       <Route exact path="/" component={SplashPage} />
-      <ProtectedRoute exact path="/home" component={HomeContainer} />
+      <Route exact path="/home" render={() => <Redirect to="/login" />} />
       <ProtectedRoute exact path="/home/:seventhLevelId" component={ShowContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
@@ -25,5 +25,6 @@ const App = () => {
   );
 };
 
+{/* <ProtectedRoute exact path="/home" component={HomeContainer} /> */}
 
 export default App;
