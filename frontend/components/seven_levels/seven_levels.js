@@ -7,7 +7,6 @@ class SevenLevels extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      id: 0,
       title: "",
       phrase: "",
       core1: "",
@@ -43,7 +42,7 @@ class SevenLevels extends React.Component {
 
   componentDidMount() {
     this.props.fetchSeventhLevel(this.props.seventhLevelId).then( (response) => {
-      this.setState(response.seventhLevel)
+      this.setState(response.seventhLevel);
     })
   }
 
