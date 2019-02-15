@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { ProtectedRoute, AuthRoute } from '../util/route_util';
-import GreetingContainer from './greeting/greeting_container';
+import NavContainer from './nav/nav_container';
 import ShowContainer from './seven_levels/show_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
@@ -12,7 +12,7 @@ const App = () => {
   return (
     <div>
       <header>
-        <GreetingContainer />
+        <NavContainer />
       </header>
       <Route exact path="/" component={SplashPage} />
       <Route exact path="/home" render={() => <Redirect to="/login" />} />
