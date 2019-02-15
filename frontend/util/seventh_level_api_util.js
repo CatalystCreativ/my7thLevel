@@ -27,11 +27,13 @@ export const fetchSeventhLevels = () => {
   });
 };
 
-export const updateSeventhLevel = (seventhLevelData) => {
+export const updateSeventhLevel = (seventh_level) => {
   return $.ajax({
     method: 'PATCH',
-    url: `api/seventh_levels/${seventhLevelData.id}`,
-    data: { seventhLevelData }
+    url: `api/seventh_levels/${seventh_level.id}`,
+    data: {
+      seventh_level
+      }
   });
 };
 
