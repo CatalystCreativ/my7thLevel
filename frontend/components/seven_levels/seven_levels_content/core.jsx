@@ -1,4 +1,4 @@
-import { CORE } from '../variables';
+import { CORE, CORE_TOP_TEXT } from '../variables';
 import React from 'react';
 
 class Core extends React.Component {
@@ -28,6 +28,9 @@ class Core extends React.Component {
 
     return (
       <div>
+        <div>
+          {CORE_TOP_TEXT}
+        </div>
         {coreTexts}
       </div>
     );

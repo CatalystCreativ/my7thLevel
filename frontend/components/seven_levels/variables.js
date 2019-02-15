@@ -1,3 +1,6 @@
+// CORE Front text
+export const CORE_TOP_TEXT = "When leveraging the Seventh Level Engagement Framework, it is vital for you (as an individual or company) to start at level seven.  What do we mean by that?  Identifying, authentically living and being able to communicate your values is a mandatory first step before you can meaningfully connect with your audience.  Know your own narrative, then you work towards getting others to engage with you at the highest level."
+
 // CORE QUESTIONS
 export const CORE = [
   "WHO ARE YOU?",
