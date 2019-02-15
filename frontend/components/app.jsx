@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import { ProtectedRoute, AuthRoute } from '../util/route_util';
 import GreetingContainer from './greeting/greeting_container';
 import HomeContainer from './seven_levels/home_container';
