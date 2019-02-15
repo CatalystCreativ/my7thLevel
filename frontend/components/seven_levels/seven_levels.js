@@ -36,8 +36,6 @@ class SevenLevels extends React.Component {
       action7: "",
       question7: "",
       goal7: "",
-      user_id: 0,
-      notes: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.update = this.update.bind(this);
@@ -52,7 +50,7 @@ class SevenLevels extends React.Component {
   handleSubmit() {
     return (e) => {
       e.preventDefault();
-      this.props.processForm(this.state);
+      this.props.updateSeventhLevel(this.state);
     };
   }
 
@@ -125,10 +123,8 @@ class SevenLevels extends React.Component {
     }
 
     return(
-      <div>
         <form className="" onSubmit={this.handleSubmit()}>
           <input type="text" onChange={this.update("title")} value={this.state.title}></input>
-        </form>
 
         <div>
           <h2>Start with Seven</h2>
@@ -148,7 +144,8 @@ class SevenLevels extends React.Component {
           <h2>Stage 3</h2>
           {stage3}
         </div>
-      </div>
+        <button className="btn btn-primary" type="submit">Save</button>
+      </form>
     );
   }
 }
