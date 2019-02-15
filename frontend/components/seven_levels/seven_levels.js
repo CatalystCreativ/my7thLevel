@@ -48,7 +48,8 @@ class SevenLevels extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchSeventhLevel(this.props.seventhLevelId);
+    this.props.fetchSeventhLevel(this.props.seventhLevelId)
+      .then((seventhLevel) => this.setState({title:this.props.title,}));
   }
 
   handleSubmit() {
