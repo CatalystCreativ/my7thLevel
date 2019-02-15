@@ -40,6 +40,7 @@ class Api::SeventhLevelsController < ApplicationController
   def seventh_level_params
     # Possibly add attr param for specific attribute updating
     params.require(:seventh_level).permit(
+    :title,  
     :phrase,
     :core1,
     :core2,
@@ -67,7 +68,7 @@ class Api::SeventhLevelsController < ApplicationController
     :action7,
     :question7,
     :goal7,
-    :title)
+    )
   end
 
 end
