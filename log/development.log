@@ -3160,3 +3160,205 @@ Processing by StaticPageController#root as HTML
 Completed 200 OK in 2243ms (Views: 2234.8ms | ActiveRecord: 5.0ms)
 
 
+Started POST "/api/session" for 127.0.0.1 at 2019-02-15 14:57:47 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo_user@notMail.com", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "organization"=>""}}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo_user@notMail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo_user@notMail.com"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (40.6ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "8y90X3e7fl543nD-fKrDjQ"], ["updated_at", "2019-02-15 19:57:47.751904"], ["id", 1]]
+  ↳ app/models/user.rb:36
+  [1m[35m (41.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  [1m[36mSeventhLevel Load (18.3ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."user_id" = $1 ORDER BY "seventh_levels"."id" DESC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/sessions_controller.rb:9
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (9.8ms)
+Completed 200 OK in 363ms (Views: 24.5ms | ActiveRecord: 125.1ms)
+
+
+Started GET "/api/seventh_levels/1" for 127.0.0.1 at 2019-02-15 14:57:48 -0500
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSeventhLevel Load (1.1ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.8ms)
+  Rendered api/seventh_levels/show.json.jbuilder (3.8ms)
+Completed 200 OK in 21ms (Views: 16.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-15 15:00:09 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8y90X3e7fl543nD-fKrDjQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_page/root.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 2108ms (Views: 2103.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/seventh_levels/1" for 127.0.0.1 at 2019-02-15 15:00:12 -0500
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSeventhLevel Load (0.7ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (1.1ms)
+  Rendered api/seventh_levels/show.json.jbuilder (3.2ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-15 15:03:24 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8y90X3e7fl543nD-fKrDjQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (2.0ms)
+  Rendered static_page/root.html.erb within layouts/application (28.6ms)
+Completed 200 OK in 119ms (Views: 101.1ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/api/seventh_levels/1" for 127.0.0.1 at 2019-02-15 15:03:25 -0500
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSeventhLevel Load (1.5ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (2.9ms)
+  Rendered api/seventh_levels/show.json.jbuilder (6.4ms)
+Completed 200 OK in 27ms (Views: 17.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-15 15:07:46 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8y90X3e7fl543nD-fKrDjQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_page/root.html.erb within layouts/application (48.0ms)
+Completed 200 OK in 120ms (Views: 114.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/seventh_levels/1" for 127.0.0.1 at 2019-02-15 15:07:47 -0500
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSeventhLevel Load (3.8ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (1.0ms)
+  Rendered api/seventh_levels/show.json.jbuilder (6.2ms)
+Completed 200 OK in 34ms (Views: 17.7ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-15 15:08:37 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (7.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8y90X3e7fl543nD-fKrDjQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.9ms)
+  Rendered static_page/root.html.erb within layouts/application (36.9ms)
+Completed 200 OK in 868ms (Views: 841.1ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/api/seventh_levels/1" for 127.0.0.1 at 2019-02-15 15:08:40 -0500
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSeventhLevel Load (2.1ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (2.5ms)
+  Rendered api/seventh_levels/show.json.jbuilder (8.2ms)
+Completed 200 OK in 29ms (Views: 23.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-15 15:10:18 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8y90X3e7fl543nD-fKrDjQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_page/root.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 78ms (Views: 64.0ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/api/seventh_levels/1" for 127.0.0.1 at 2019-02-15 15:10:19 -0500
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSeventhLevel Load (4.7ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.7ms)
+  Rendered api/seventh_levels/show.json.jbuilder (3.2ms)
+Completed 200 OK in 32ms (Views: 16.5ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-15 15:10:33 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8y90X3e7fl543nD-fKrDjQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (3.5ms)
+  Rendered static_page/root.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 200ms (Views: 188.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/seventh_levels/1" for 127.0.0.1 at 2019-02-15 15:10:35 -0500
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSeventhLevel Load (2.8ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (3.7ms)
+  Rendered api/seventh_levels/show.json.jbuilder (8.1ms)
+Completed 200 OK in 33ms (Views: 26.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-15 15:11:30 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8y90X3e7fl543nD-fKrDjQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_page/root.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 74ms (Views: 69.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/seventh_levels/1" for 127.0.0.1 at 2019-02-15 15:11:30 -0500
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSeventhLevel Load (0.9ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (1.3ms)
+  Rendered api/seventh_levels/show.json.jbuilder (4.9ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-02-15 15:13:19 -0500
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (5.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8y90X3e7fl543nD-fKrDjQ"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.7ms)
+  Rendered static_page/root.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 603ms (Views: 589.1ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/api/seventh_levels/1" for 127.0.0.1 at 2019-02-15 15:13:21 -0500
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mSeventhLevel Load (1.7ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (3.5ms)
+  Rendered api/seventh_levels/show.json.jbuilder (7.0ms)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 1.7ms)
+
+

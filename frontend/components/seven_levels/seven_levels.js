@@ -129,7 +129,7 @@ class SevenLevels extends React.Component {
 
     return(
       <div>
-        <form className="" onClick={this.handleSubmit()}>
+        <form className="" onSubmit={this.handleSubmit()}>
           <input type="text" onChange={this.update("title")} value={this.state.title}></input>
         </form>
 
