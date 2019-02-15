@@ -2,7 +2,7 @@ class Api::UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @seventh_level = @user.seventh_levels.last
+    # @newest_seventh_level_id = @user.seventh_levels.last.id
     render :show
   end
 
@@ -39,9 +39,11 @@ class Api::UsersController < ApplicationController
         :action7 => '',
         :question7 => '',
         :goal7 => '',
-        :user_id => @user.id,
+        # :user_id => @user.id, <- this is unnecessary since we are adding this to @user.seventh_levels
         :notes => ''
       })]
+      @user.recent_seventh_level_id = @user.seventh_levels.last.id
+
       login(@user)
       render 'api/users/show'
     else
