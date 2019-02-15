@@ -30,7 +30,6 @@
     :action7,
     :question7,
     :goal7,
-    :user_id,
-    :notes
+    :user_id
   end
 end
