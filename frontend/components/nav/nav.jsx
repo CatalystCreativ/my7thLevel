@@ -4,12 +4,12 @@ import { Link } from 'react-router-dom';
 class Nav extends React.Component {
 
   render() {
-    const { currentUser, logout } = this.props;
+    const { currentUserInfo, currentUser, logout } = this.props;
     let navItems;
     if (currentUser) {
       navItems = (
         <div className='d-flex flex-row'>
-          <span className='navbar-text'>Logged in as {currentUser.first_name}</span>
+          <span className='navbar-text'>Logged in as {currentUserInfo.first_name}</span>
           <button className='btn btn-outline-primary ml-3' onClick={logout}>Log Out</button>
         </div>
       );
@@ -46,5 +46,3 @@ class Nav extends React.Component {
   }
 }
 export default Nav;
-
-
