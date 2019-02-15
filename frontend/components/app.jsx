@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { ProtectedRoute, AuthRoute } from '../util/route_util';
 import GreetingContainer from './greeting/greeting_container';
-import HomeContainer from './seven_levels/home_container';
 import ShowContainer from './seven_levels/show_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';

@@ -10,7 +10,7 @@ class Level extends React.Component {
 
     const { levelNum, levelTitle, levelDescription, actionDescription, actionExamples, questionDescription, questionExamples, goalDescription, goalExamples } = this.props.levelConsts;
 
-    const { update, handleSubmit } = this.props;
+    const { update, handleSubmit, action, question, goal } = this.props;
     return (
       <>
         <div className="row d-flex justify-content-around mb-5">
@@ -54,7 +54,7 @@ class Level extends React.Component {
               Action:
             </div>
             <div className="card-body">
-                <textarea onChange={update(`a${levelNum}`)} className="w-100" name="" id="" cols="30" rows="10"></textarea>
+                <textarea onChange={update(`a${levelNum}`)} className="w-100" value={action} cols="30" rows="10"></textarea>
             </div>
           </div>
         </div>
@@ -85,7 +85,7 @@ class Level extends React.Component {
               Questions:
             </div>
             <div className="card-body">
-              <textarea onChange={update(`q${levelNum}`)} className="w-100" name="" id="" cols="30" rows="10"></textarea>
+              <textarea onChange={update(`q${levelNum}`)} className="w-100" value={question} cols="30" rows="10"></textarea>
             </div>
           </div>
         </div>
@@ -116,7 +116,7 @@ class Level extends React.Component {
               Goals:
             </div>
             <div className="card-body">
-              <textarea onChange={update(`g${levelNum}`)} className="w-100" name="" id="" cols="30" rows="10"></textarea>
+              <textarea onChange={update(`g${levelNum}`)} className="w-100" value={goal} cols="30" rows="10"></textarea>
             </div>
           </div>
         </div>

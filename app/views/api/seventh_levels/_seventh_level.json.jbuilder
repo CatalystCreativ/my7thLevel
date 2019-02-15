@@ -1,4 +1,5 @@
 json.extract! seventh_level, 
+:id,
 :title,
 :phrase,
 :core1,
