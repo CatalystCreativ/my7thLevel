@@ -123,6 +123,9 @@ class SevenLevels extends React.Component {
     }
 
     return(
+      <div className="row">
+        <SidebarContainer />
+        <div className="col-9 pt-4"></div>
         <form className="" onSubmit={this.handleSubmit()}>
           <input type="text" onChange={this.update("title")} value={this.state.title}></input>
           <button className="btn btn-primary" type="submit">Save</button>
@@ -168,6 +171,7 @@ class SevenLevels extends React.Component {
         </div>
 
       </form>
+      </div>
     );
   }
 }
