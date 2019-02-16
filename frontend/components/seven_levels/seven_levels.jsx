@@ -124,26 +124,48 @@ class SevenLevels extends React.Component {
     return(
         <form className="" onSubmit={this.handleSubmit()}>
           <input type="text" onChange={this.update("title")} value={this.state.title}></input>
+          <button className="btn btn-primary" type="submit">Save</button>
 
         <div>
           <h2>Start with Seven</h2>
           {core}
         </div>
-        <div>
-          <h2>Stage 1</h2>
-          {stage1}
+
+        <div style={{backgroundColor: 'gray'}} id="carousel-levels" className="carousel slide" data-ride="carousel">
+          <div className="carousel-inner" style={{height: '1300px'}}>
+
+            <div className="carousel-item h-100 active" data-interval="9999999999999">
+              <div className="h-100">
+                <h2>Stage 1</h2>
+              </div>
+            </div>
+            {stage1}
+
+            <div className="carousel-item h-100"  data-interval="9999999999999">
+              <div className="h-100">
+                <h2>Stage 2</h2>
+              </div>
+            </div>
+            {stage2}
+
+            <div className="carousel-item h-100" data-interval="9999999999999">
+              <div className="h-100">
+                <h2>Stage 3</h2>
+              </div>
+            </div>
+            {stage3}
+
+          </div>
+            <a className="carousel-control-prev" href="#carousel-levels" role="button" data-slide="prev">
+              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span className="sr-only">Previous</span>
+            </a>
+            <a className="carousel-control-next" href="#carousel-levels" role="button" data-slide="next">
+              <span className="carousel-control-next-icon" aria-hidden="true"></span>
+              <span className="sr-only">Next</span>
+            </a>
         </div>
 
-        <div>
-          <h2>Stage 2</h2>
-          {stage2}
-        </div>
-
-        <div>
-          <h2>Stage 3</h2>
-          {stage3}
-        </div>
-        <button className="btn btn-primary" type="submit">Save</button>
       </form>
     );
   }
