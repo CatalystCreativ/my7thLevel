@@ -18,16 +18,22 @@ class Sidebar extends React.Component {
   }
 
   render() {
-    const seventhLevels = this.props.seventhLevels.map(seventhLevel => {
+  const seventhLevelsValues = Object.values(this.props.seventhLevels);
+    const seventhLevels = seventhLevelsValues.map((seventhLevel, idx) => {
       return (
-        <Link to={`/seventh_levels/${seventhLevel.id}`}>{seventhLevel.title}</Link>
+        <li key={idx} className="text-white">
+          <Link to={`/seventh_levels/${seventhLevel.id}`}>{seventhLevel.title}</Link>
+        </li>
       );
     });
     return (
-      <ul>
-        <button onClick={this.newSeventhLevel}>New Seventh Level</button>
-        {seventhLevels}
-      </ul>
+      <div className="col-3 bg-secondary shadow pt-4">
+        <button className="btn btn-primary" onClick={this.newSeventhLevel}>New Seventh Level</button>
+
+        <ul>
+          {seventhLevels}
+        </ul>
+      </div>
     );
   }
 }
