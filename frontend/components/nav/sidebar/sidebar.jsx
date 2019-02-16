@@ -24,7 +24,7 @@ class Sidebar extends React.Component {
     const seventhLevels = seventhLevelsValues.map((seventhLevel, idx) => {
       return (
         <li key={idx} className="text-white">
-          <Link to={`/seventh_levels/${seventhLevel.id}`}>{seventhLevel.title}</Link>
+          <Link to={`/home/${seventhLevel.id}`}>{seventhLevel.title}</Link>
         </li>
       );
     });
