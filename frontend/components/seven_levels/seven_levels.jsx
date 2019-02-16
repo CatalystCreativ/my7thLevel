@@ -1,5 +1,6 @@
 import { LEVELS } from './variables';
 import LevelComponent from './seven_levels_content/level';
+import SidebarContainer from '../nav/sidebar/sidebar_container';
 import Core from './seven_levels_content/core';
 import React from 'react';
 
@@ -122,29 +123,35 @@ class SevenLevels extends React.Component {
     }
 
     return(
-        <form className="" onSubmit={this.handleSubmit()}>
-          <input type="text" onChange={this.update("title")} value={this.state.title}></input>
+      <div className="row">
+        <SidebarContainer />
+        <div className="col-9 pt-4">
+          <form className="" onSubmit={this.handleSubmit()}>
+            <input type="text" onChange={this.update("title")} value={this.state.title}></input>
 
-        <div>
-          <h2>Start with Seven</h2>
-          {core}
-        </div>
-        <div>
-          <h2>Stage 1</h2>
-          {stage1}
+            <div>
+              <h2>Start with Seven</h2>
+              {core}
+            </div>
+            <div>
+              <h2>Stage 1</h2>
+              {stage1}
+            </div>
+
+            <div>
+              <h2>Stage 2</h2>
+              {stage2}
+            </div>
+
+            <div>
+              <h2>Stage 3</h2>
+              {stage3}
+            </div>
+            <button className="btn btn-primary" type="submit">Save</button>
+          </form>
         </div>
 
-        <div>
-          <h2>Stage 2</h2>
-          {stage2}
-        </div>
-
-        <div>
-          <h2>Stage 3</h2>
-          {stage3}
-        </div>
-        <button className="btn btn-primary" type="submit">Save</button>
-      </form>
+      </div>
     );
   }
 }

@@ -35,13 +35,11 @@ class Nav extends React.Component {
     }
 
     return (
-      <div>
-        <nav className='justify-content-between navbar navbar-expand-lg navbar-light bg-light'>
+        <nav className='justify-content-between navbar navbar-expand-lg navbar-light bg-light shadow fixed-top'>
           <Link className='navbar-brand' to='/'>7th Level</Link>
 
           {navItems}
         </nav>
-      </div>
     );
   }
 }
