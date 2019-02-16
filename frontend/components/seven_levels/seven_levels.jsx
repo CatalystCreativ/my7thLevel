@@ -1,5 +1,6 @@
 import { LEVELS } from './variables';
 import LevelComponent from './seven_levels_content/level';
+import SidebarContainer from '../nav/sidebar/sidebar_container';
 import Core from './seven_levels_content/core';
 import React from 'react';
 
