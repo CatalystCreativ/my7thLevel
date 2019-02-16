@@ -11,8 +11,9 @@ class Level extends React.Component {
     const { levelNum, levelTitle, levelDescription, actionDescription, actionExamples, questionDescription, questionExamples, goalDescription, goalExamples } = this.props.levelConsts;
 
     const { update, handleSubmit, action, question, goal } = this.props;
+
     return (
-      <>
+      <div className="carousel-item" data-interval="9999999999999">
         <div className="row d-flex justify-content-around mb-5">
           <div className="card-deck">
             <div className="card text-white bg-dark">
@@ -121,7 +122,7 @@ class Level extends React.Component {
           </div>
         </div>
 
-     </> 
+     </div> 
     );
   }
 }
