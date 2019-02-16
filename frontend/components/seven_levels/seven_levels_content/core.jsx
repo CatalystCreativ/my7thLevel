@@ -27,12 +27,15 @@ class Core extends React.Component {
     });
 
     return (
-      <div>
-        <div>
+      <>
+        <div className="carousel-item active" data-interval="9999999999999">
+          <h2>Start with Seven</h2>
           {CORE_TOP_TEXT}
         </div>
-        {coreTexts}
-      </div>
+        <div className="carousel-item" data-interval="9999999999999">
+          {coreTexts}
+        </div>
+      </>
     );
   }
 }
