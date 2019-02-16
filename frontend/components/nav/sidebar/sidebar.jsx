@@ -7,6 +7,8 @@ class Sidebar extends React.Component {
     super(props);
     this.fetchSeventhLevels = this.props.fetchSeventhLevels;
     this.createSeventhLevel = this.props.createSeventhLevel;
+
+    this.newSeventhLevel = this.newSeventhLevel.bind(this);
   }
 
   componentDidMount() {
