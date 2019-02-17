@@ -2,16 +2,23 @@
 <html>
   <head>
     <title>MySeventhLevel</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
     <%= javascript_include_tag 'application' %>
 
   </head>
 
-  <body style="padding-top: 50px">
+  <body>
     <script> window.backgroundImage = "<%= asset_path('fists.jpg').html_safe %>"</script>
     <%= yield %>
+
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
   </body>
 </html>

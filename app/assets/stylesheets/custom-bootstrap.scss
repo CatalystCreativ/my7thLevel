@@ -1,5 +1,37 @@
-width {
+.width {
     width: 0;
     height: auto;
     transition-property: width;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    color: #fff;
+    transition: all 0.3s;
+    margin-left: -250px;
+}
+
+#sidebar.active {
+    margin-left: 0px;
+}
+
+#content {
+    margin-left: 0px;
+    transition: all 0.3s;
+    width: 100vw;
+}
+
+#content.active {
+    margin-left: 250px;
+    width: 100%;
 }
