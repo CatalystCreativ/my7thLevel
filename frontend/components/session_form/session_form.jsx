@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import  NavContainer from '../nav/nav_container';
 
 class SessionForm extends React.Component {
 
@@ -70,38 +71,40 @@ class SessionForm extends React.Component {
     );
 
     return (
-      <div className="login-container">
+      <div>
 
-        <div className="shadow w-50 mx-auto m-5 p-5">
+        <NavContainer />
+        <div className="login-container">
 
-          <div className="container">
-            <header className='w-25 mx-auto text-center'>
-              <h3>{formType}</h3>
-              {this.renderErrors()}
-            </header>
+          <div className="shadow w-50 mx-auto m-5 p-5">
 
-            <div className="col-7 mx-auto">
-              <form onSubmit={this.handleSubmit} className="">
-                {extraFields}
+            <div className="container">
+              <header className='w-25 mx-auto text-center'>
+                <h3>{formType}</h3>
+                {this.renderErrors()}
+              </header>
 
-                <div className="form-group">
-                  <label htmlFor="email">Email Address: </label>
-                  <input type="text" className="form-control" placeholder="Email Address" id="email" value={this.state.email} onChange={this.update('email')}/>
-                </div>
+              <div className="col-7 mx-auto">
+                <form onSubmit={this.handleSubmit} className="">
+                  {extraFields}
 
-                <div className="form-group">
-                  <label htmlFor="password">Password: </label>
-                  <input type="password" className="form-control" placeholder="Password" id="password" value={this.state.password} onChange={this.update('password')}/>
-                </div>
-                <div className='w-100 text-center'>
-                  <button type="submit" className="btn btn-primary">{formType}</button>
-                </div>
-              </form>
+                  <div className="form-group">
+                    <label htmlFor="email">Email Address: </label>
+                    <input type="text" className="form-control" placeholder="Email Address" id="email" value={this.state.email} onChange={this.update('email')}/>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="password">Password: </label>
+                    <input type="password" className="form-control" placeholder="Password" id="password" value={this.state.password} onChange={this.update('password')}/>
+                  </div>
+                  <div className='w-100 text-center'>
+                    <button type="submit" className="btn btn-primary">{formType}</button>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
-
-
       </div>
     );
   }

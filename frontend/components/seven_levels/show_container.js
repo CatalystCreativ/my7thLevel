@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import SevenLevels from './seven_levels';
 import { fetchSeventhLevel, updateSeventhLevel } from '../../actions/seventh_level_actions';
 
@@ -20,4 +21,4 @@ const mdp = (dispatch) => {
   };
 };
 
-export default connect(msp, mdp)(SevenLevels);
+export default withRouter(connect(msp, mdp)(SevenLevels));
