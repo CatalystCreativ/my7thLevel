@@ -11,9 +11,7 @@ import SplashPage from './splash_page/splash_page';
 const App = () => {
   return (
     <div>
-      <header>
-        <NavContainer />
-      </header>
+      
       <Route exact path="/" component={SplashPage} />
       <Route exact path="/home" render={() => <Redirect to="/login" />} />
       <ProtectedRoute exact path="/home/:seventhLevelId" component={ShowContainer} />

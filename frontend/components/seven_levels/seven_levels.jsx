@@ -1,6 +1,7 @@
 import { LEVELS } from './variables';
 import LevelComponent from './seven_levels_content/level';
 import SidebarContainer from '../nav/sidebar/sidebar_container';
+import NavContainer from '../nav/nav_container'
 import Core from './seven_levels_content/core';
 import React from 'react';
 
@@ -123,11 +124,16 @@ class SevenLevels extends React.Component {
     }
 
     return(
-      <div className="row" style={{transition: "all 1s"}}>
+      <div className="wrapper">
         <SidebarContainer />
 
-        <div className="col-9 pt-4">
-          <form className="" onSubmit={this.handleSubmit()}>
+
+        <div className="" id="content">
+          <header>
+            <NavContainer />
+          </header>
+
+          <form className="pt-4" onSubmit={this.handleSubmit()}>
             <input type="text" onChange={this.update("title")} value={this.state.title}></input>
             <button className="btn btn-primary" type="submit">Save</button>
 
