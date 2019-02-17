@@ -22,7 +22,8 @@ class Sidebar extends React.Component {
   }
 
   newSeventhLevel() {
-    this.createSeventhLevel().then((seventhLevel) => <Redirect to={`/home/${seventhLevel.id}`} />);
+    this.createSeventhLevel().then((response) => {
+    this.props.history.push(`/home/${response.seventhLevel.id}`)});
   }
 
   render() {
