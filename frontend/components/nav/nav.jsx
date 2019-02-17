@@ -8,18 +8,21 @@ class Nav extends React.Component {
     let navItems;
     if (currentUser) {
       navItems = (
-        <div className='d-flex flex-row'>
-          <span className='navbar-text'>Logged in as {currentUserInfo.first_name}</span>
-          <button className='btn btn-outline-primary ml-3' onClick={logout}>Log Out</button>
+        <div className='collapse navbar-collapse' id="navbarNav">
+          <ul className='navbar-nav'>
+            <li className='nav-item'>
+              <a className='navbar-text' data-toggle='collapse' href="#sidebar" role='button' aria-expanded='false' aria-controls='sidebar'>My Seventh Levels</a>
+            </li>
+            <li className='nav-item'>
+              <span className='navbar-text'>Logged in as {currentUserInfo.first_name}</span>
+            <button className='btn btn-outline-primary ml-3' onClick={logout}>Log Out</button>
+            </li>
+          </ul>
         </div>
       );
     } else {
       navItems = (
-        <div>
-          <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbaNav' aria-expanded='false' aria-label='Toggle navigation'>
-            <span className="navbar-toggler-icon"></span>
-          </button>
-
+        <>
           <div className='collapse navbar-collapse' id='navbarNav'>
             <ul className='navbar-nav'>
               <li className='nav-item'>
@@ -30,7 +33,7 @@ class Nav extends React.Component {
               </li>
             </ul>
           </div>
-        </div>
+        </>
       );
     }
 
@@ -38,7 +41,13 @@ class Nav extends React.Component {
         <nav className='justify-content-between navbar navbar-expand-lg navbar-light bg-light shadow fixed-top'>
           <Link className='navbar-brand' to='/'>7th Level</Link>
 
-          {navItems}
+          <div>
+            <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbaNav' aria-expanded='false' aria-label='Toggle navigation'>
+              <span className="navbar-toggler-icon"></span>
+            </button>
+
+            {navItems}
+          </div>
         </nav>
     );
   }

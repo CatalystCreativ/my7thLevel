@@ -123,7 +123,7 @@ class SevenLevels extends React.Component {
     }
 
     return(
-      <div className="row">
+      <div className="row" style={{transition: "all 1s"}}>
         <SidebarContainer />
 
         <div className="col-9 pt-4">
