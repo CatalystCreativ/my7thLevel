@@ -6,7 +6,7 @@ class Api::SessionsController < ApplicationController
     
     if @user
       login(@user)
-      @user.recent_seventh_level_id = @user.seventh_levels.last.id
+      # @user.recent_seventh_level_id = @user.seventh_levels.last.id
       render 'api/users/show'
     else
       render json: ['Invalid Username and/or Password'], status: 422

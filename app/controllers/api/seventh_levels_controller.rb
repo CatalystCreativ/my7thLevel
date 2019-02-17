@@ -17,6 +17,8 @@ class Api::SeventhLevelsController < ApplicationController
   def create
     @seventh_level = current_user.seventh_levels.new(seventh_level_params)
     if @seventh_level.save
+      current_user.recent_seventh_level_id = @seventh_level.id
+      current_user.save
       render :show
     else
       render json: @seventh_level.errors.full_messages, status: 422
@@ -29,6 +31,8 @@ class Api::SeventhLevelsController < ApplicationController
       # if @seventh_level.update_attribute([attr]: seventh_level_params[attr])
       # update_attributes/update_attribute
       # commented this out for now because it was giving errors - Jess 
+      current_user.recent_seventh_level_id = @seventh_level.id
+      current_user.save
       render json: @seventh_level
     else
       render json: @seventh_level.errors.full_messages, status: 422

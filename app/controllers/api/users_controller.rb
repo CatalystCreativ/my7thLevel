@@ -42,7 +42,7 @@ class Api::UsersController < ApplicationController
         # :user_id => @user.id, <- this is unnecessary since we are adding this to @user.seventh_levels
         :notes => ''
       })]
-      @user.recent_seventh_level_id = @user.seventh_levels.last.id
+      # @user.recent_seventh_level_id = @user.seventh_levels.last.id
 
       login(@user)
       render 'api/users/show'
