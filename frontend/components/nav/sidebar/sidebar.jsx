@@ -23,8 +23,8 @@ class Sidebar extends React.Component {
   const seventhLevelsValues = Object.values(this.props.seventhLevels);
     const seventhLevels = seventhLevelsValues.map((seventhLevel, idx) => {
       return (
-        <li key={idx} className="text-white">
-          <Link to={`/home/${seventhLevel.id}`}>{seventhLevel.title}</Link>
+        <li key={idx} className="list-group-item bg-secondary">
+          <Link className="text-white" to={`/home/${seventhLevel.id}`}>{seventhLevel.title}</Link>
         </li>
       );
     });
@@ -32,7 +32,7 @@ class Sidebar extends React.Component {
       <div className="col-3 bg-secondary shadow pt-4">
         <button className="btn btn-primary" onClick={this.newSeventhLevel}>New Seventh Level</button>
 
-        <ul>
+        <ul className="list-group list-group-flush bg-secondary w-100 mx-auto">
           {seventhLevels}
         </ul>
       </div>
