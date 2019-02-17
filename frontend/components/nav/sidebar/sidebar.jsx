@@ -13,6 +13,12 @@ class Sidebar extends React.Component {
 
   componentDidMount() {
     this.fetchSeventhLevels();
+
+    $("#sidebar").mCustomScrollbar({
+      theme: "minimal"
+    });
+
+
   }
 
   newSeventhLevel() {
@@ -29,13 +35,20 @@ class Sidebar extends React.Component {
       );
     });
     return (
-      <div className="col-3 collapse bg-secondary shadow pt-4" id="sidebar">
-        <button className="btn btn-primary" onClick={this.newSeventhLevel}>New Seventh Level</button>
+      <nav className="shadow bg-secondary" id="sidebar" ref={elem => this.sidebar = elem}>
+        <div className="sidebar-header">
+          <h3>My Seventh Levels</h3>
+        </div>
 
-        <ul className="list-group list-group-flush bg-secondary w-100 mx-auto">
-          {seventhLevels}
-        </ul>
-      </div>
+        <div className="bg-secondary shadow pt-4">
+          <button className="btn btn-primary" onClick={this.newSeventhLevel}>New Seventh Level</button>
+
+          <ul className="list-group list-group-flush bg-secondary w-100 mx-auto">
+            {seventhLevels}
+          </ul>
+        </div>
+
+      </nav>
     );
   }
 }
