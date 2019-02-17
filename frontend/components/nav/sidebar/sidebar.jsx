@@ -29,7 +29,7 @@ class Sidebar extends React.Component {
       );
     });
     return (
-      <div className="col-3 bg-secondary shadow pt-4 collapse" id="sidebar">
+      <div className="col-3 collapse bg-secondary shadow pt-4" id="sidebar">
         <button className="btn btn-primary" onClick={this.newSeventhLevel}>New Seventh Level</button>
 
         <ul className="list-group list-group-flush bg-secondary w-100 mx-auto">

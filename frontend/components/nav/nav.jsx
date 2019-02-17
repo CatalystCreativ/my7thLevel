@@ -14,7 +14,7 @@ class Nav extends React.Component {
               <a className='navbar-text' data-toggle='collapse' href="#sidebar" role='button' aria-expanded='false' aria-controls='sidebar'>My Seventh Levels</a>
             </li>
             <li className='nav-item'>
-              <span className='navbar-text'>Logged in as {currentUserInfo.first_name}</span>
+              <span className='navbar-text ml-3'>Logged in as {currentUserInfo.first_name}</span>
             <button className='btn btn-outline-primary ml-3' onClick={logout}>Log Out</button>
             </li>
           </ul>
