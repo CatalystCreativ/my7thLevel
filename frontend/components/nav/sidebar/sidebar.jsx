@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter, Link, Redirect } from 'react-router-dom';
 
 
 class Sidebar extends React.Component {
@@ -22,7 +22,7 @@ class Sidebar extends React.Component {
   }
 
   newSeventhLevel() {
-    this.createSeventhLevel().then((seventhLevel) => this.props.history.push(`/home/${seventhLevel.id}`));
+    this.createSeventhLevel().then((seventhLevel) => <Redirect to={`/home/${seventhLevel.id}`} />);
   }
 
   render() {

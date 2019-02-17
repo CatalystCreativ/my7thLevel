@@ -9,6 +9,7 @@ class SevenLevels extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      id: -1,
       title: "",
       phrase: "",
       core1: "",
@@ -46,6 +47,14 @@ class SevenLevels extends React.Component {
     this.props.fetchSeventhLevel(this.props.seventhLevelId).then( (response) => {
       this.setState(response.seventhLevel);
     })
+  }
+
+  componentDidUpdate() {
+    const { seventhLevelId: urlId } = this.props.match.params;
+    if(`${urlId}` !== `${this.state.id}`) {
+      this.props.fetchSeventhLevel(urlId)
+        .then(response => this.setState(response.seventhLevel));
+    }
   }
 
   handleSubmit() {
