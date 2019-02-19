@@ -3,6 +3,12 @@
   flex-direction: column;
   background: image-url('fists.jpeg');
   width: 100%;
+  padding-bottom: 10px;
+}
+
+.btn.btn-back {
+  background-color: #3EC2CF;
+  color: white;
 }
 
 .shadow.w-50.mx-auto.m-5.p-5 {
@@ -12,6 +18,37 @@
   min-width: 360px;
 }
 
+.container.splash {
+  padding-top: 105px;
+}
+
+.row.pb-3 {
+  padding-top: 65px;
+}
+
 .login-container {
   margin-top: 100px;
+}
+
+.row {
+  padding-top: 100px;
+}
+
+.row.bg.img-fluid.pt-5 {
+  margin: none;
+}
+
+.row.bg {
+  background: image-url('3top.jpeg');
+  max-width: 100%;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: none;
+}
+
+.box {
+  width: 1000px;
+  height: 700px;
+  margin-left: 15px;
 }
