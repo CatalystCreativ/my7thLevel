@@ -11,8 +11,8 @@ import SplashPage from './splash_page/splash_page';
 const App = () => {
   return (
     <div>
-      
-      <Route exact path="/" component={SplashPage} />
+
+      <AuthRoute exact path="/" component={SplashPage} />
       <Route exact path="/home" render={() => <Redirect to="/login" />} />
       <ProtectedRoute exact path="/home/:seventhLevelId" component={ShowContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
