@@ -36,19 +36,20 @@ class Sidebar extends React.Component {
       );
     });
     return (
-      <nav className="shadow bg-secondary" id="sidebar" ref={elem => this.sidebar = elem}>
-        <div className="sidebar-header">
-          <h3>My Seventh Levels</h3>
-        </div>
+      <nav className="d-inline-flex p-1 shadow bg-secondary" id="sidebar" ref={elem => this.sidebar = elem}>
+        <div className="d-flex align-items-center flex-column w-100">
+          <div className="sidebar-header">
+            <h3>My Seventh Levels</h3>
+          </div>
 
-        <div className="bg-secondary shadow pt-4">
-          <button className="btn btn-primary" onClick={this.newSeventhLevel}>New Seventh Level</button>
-
-          <ul className="list-group list-group-flush bg-secondary w-100 mx-auto">
-            {seventhLevels}
-          </ul>
-        </div>
-
+          <div className="d-flex flex-column bg-secondary shadow w-100">
+            <ul className="list-group align-text-center list-group-flush bg-secondary w-100 mx-auto">
+              {seventhLevels}
+            </ul>
+          </div>
+       </div> 
+        
+       <button className="mt-auto p-2 btn btn-primary w-100" onClick={this.newSeventhLevel}>New Seventh Level</button>  
       </nav>
     );
   }
