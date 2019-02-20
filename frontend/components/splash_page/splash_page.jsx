@@ -9,7 +9,7 @@ class SplashPage extends React.Component {
 
   render() {
     return (
-      <>
+      <div className="splash-wrapper">
         <div className="splash-container">
           <div>
             <SignupFormContainer />
@@ -25,12 +25,12 @@ class SplashPage extends React.Component {
               </button>
             </div>
           </div>
-      
+
           <div className="row bg img-fluid pt-5">
             <div className="box"></div>
-          </div> 
+          </div>
         </div>
-      </>
+      </div>
     );
   }
 }
