@@ -14,7 +14,7 @@ class Core extends React.Component {
     const coreTexts = CORE.map((question, idx) => {
       return (
         <div key={idx} id={`question${idx}`}>
-          <div className="card col-5">
+          <div className="card col-lg-5">
             <div className="card-header">
               {question}
             </div>
@@ -29,8 +29,8 @@ class Core extends React.Component {
     return (
       <>
         <div className="carousel-item active" data-interval="9999999999999">
-          <h2>Start with Seven</h2>
-          {CORE_TOP_TEXT}
+            <h2>Start with Seven</h2>
+            <p>{CORE_TOP_TEXT}</p>
         </div>
         <div className="carousel-item" data-interval="9999999999999">
           {coreTexts}

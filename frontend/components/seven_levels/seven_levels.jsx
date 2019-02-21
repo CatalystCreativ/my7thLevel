@@ -143,14 +143,18 @@ class SevenLevels extends React.Component {
           </header>
 
           <form className="pt-4" onSubmit={this.handleSubmit()}>
-            <input type="text" onChange={this.update("title")} value={this.state.title}></input>
-            <button className="btn btn-primary" type="submit">Save</button>
-
-
+            <div className="container mb-4">
+              <div className="row justify-content-center">
+                <input type="text" className="form-control p-4 col-md-5 col-sm-10" onChange={this.update("title")} id="title1" value={this.state.title} placeholder="What is your Seventh Level Title?"></input><br/>
+                <button className="btn btn-back" type="submit">Create</button>
+              </div>
+            </div>
+            
           <div style={{backgroundColor: 'gray'}} id="carousel-levels" className="carousel slide" data-ride="carousel">
-            <div className="carousel-inner" style={{height: '1300px'}}>
-              {core}
-
+            <div className="carousel-inner text-center" style={{height: '1100px'}}>
+              <div className="d-flex h-100 w-50 align-items-center justify-content-center">
+                {core}
+              </div>
               <div className="carousel-item h-100" data-interval="9999999999999">
                 <div className="h-100">
                   <h2>Stage 1</h2>
