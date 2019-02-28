@@ -14,7 +14,7 @@ class Core extends React.Component {
     const coreTexts = CORE.map((question, idx) => {
       return (
         <div key={idx} id={`question${idx}`}>
-          <div className="card col-lg-5">
+          <div className="card col-5">
             <div className="card-header">
               {question}
             </div>
