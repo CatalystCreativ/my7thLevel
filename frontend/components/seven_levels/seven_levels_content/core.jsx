@@ -6,38 +6,34 @@ class Core extends React.Component {
 
   render() {
 
-    const { update, handleSubmit } = this.props;
+    const { update } = this.props;
     const { core1, core2, core3, core4, core5, phrase } = this.props;
     // make array to complement the mapping procedure
     const core = [core1, core2, core3, core4, core5, phrase]; 
 
     const coreTexts = CORE.map((question, idx) => {
       return (
-        <div key={idx} id={`question${idx}`}>
-          <div className="card col-lg-5">
-            <div className="card-header">
-              {question}
-            </div>
-            <div className="card-body">
-              <textarea onChange={update(`core${idx+1}`)} className="w-100" name="" id="" cols="30" rows="2" value={core[idx]}></textarea>
-            </div>
-          </div>
-        </div>
+        <>
+          <li key={idx} className='list-group-item-dark py-2 px-3' id={`question${idx}`}>
+            {question}
+          </li>
+          <li key={idx+1} className='list-group-item-light py-2 px-5'>
+            <input className='w-100' onChange={update(`core${idx + 1}`)}type="text" placeholder={CORE[idx]} value={core[idx]}></input>
+          </li>
+        </>
       );
     });
 
     return (
-      <>
-        <div className="carousel-item active" data-interval="9999999999999">
-            <h2>Start with Seven</h2>
-            <p>{CORE_TOP_TEXT}</p>
-        </div>
-        <div className="carousel-item" data-interval="9999999999999">
+      <div className="container-fluid">
+        <ul className='list-group'>
+          
           {coreTexts}
-        </div>
-      </>
+        </ul>
+      </div>
     );
   }
 }
+// {coreTexts}
 
 export default Core;
