@@ -1,4 +1,4 @@
-import { LEVELS } from './variables';
+import { LEVELS, CORE_TOP_TEXT } from './variables';
 import LevelComponent from './seven_levels_content/level';
 import SidebarContainer from '../nav/sidebar/sidebar_container';
 import NavContainer from '../nav/nav_container'
@@ -142,55 +142,54 @@ class SevenLevels extends React.Component {
             <NavContainer />
           </header>
 
-          <form className="pt-4" onSubmit={this.handleSubmit()}>
-            <div className="container mb-4">
-              <div className="row justify-content-center">
-                <input type="text" className="form-control p-4 col-md-5 col-sm-10" onChange={this.update("title")} id="title1" value={this.state.title} placeholder="What is your Seventh Level Title?"></input><br/>
-                <button className="btn btn-back" type="submit">Create</button>
+          <form className='pt-4' onSubmit={this.handleSubmit()}>
+            <div className='container mb-4'>
+              <div className='row justify-content-center flex-row'>
+                <input type="text" className='form-control p-4 col-md-5 col-sm-10' onChange={this.update('title')} id='title1' value={this.state.title} placeholder='What is your Seventh Level Title?'/>
+                <button className='btn btn-back ml-3 px-4' type='submit'>Create</button>
               </div>
             </div>
-            
-          <div style={{backgroundColor: 'gray'}} id="carousel-levels" className="carousel slide" data-ride="carousel">
-            <div className="carousel-inner text-center" style={{height: '1100px'}}>
-              <div className="d-flex h-100 w-50 align-items-center justify-content-center">
-                {core}
+
+            <div className='jumbotron jumbotron-fluid'>
+              <div className='container'>
+                <h1 className='display-4'>Start with Seven</h1>
+                <hr className='my-4'/>
+                <p className='lead'>{CORE_TOP_TEXT}</p>
               </div>
-              <div className="carousel-item h-100" data-interval="9999999999999">
-                <div className="h-100">
-                  <h2>Stage 1</h2>
+            </div>
+
+            <div className='accordion' id='accordionSevenLevels'>
+
+              <div className='card'>
+                <div className='card-header' id='headingCore'>
+                  <h2 className='mb-0'>
+                    <a className='btn' role='button' data-toggle='collapse' href='#core'>
+                      Core
+                    </a>
+                  </h2>
+
+                  <div id='core' className='collapse' aria-labelledby='headingCore' data-parent='#accordionSevenLevels'>
+                    <div className='card-body'>
+                      {core}
+                    </div>
+                  </div>
                 </div>
               </div>
+
+              {/* Stage 1 */}
               {stage1}
-
-              <div className="carousel-item h-100"  data-interval="9999999999999">
-                <div className="h-100">
-                  <h2>Stage 2</h2>
-                </div>
-              </div>
+              {/* Stage 2 */}
               {stage2}
-
-              <div className="carousel-item h-100" data-interval="9999999999999">
-                <div className="h-100">
-                  <h2>Stage 3</h2>
-                </div>
-              </div>
+              {/* Stage 3 */}
               {stage3}
 
             </div>
-              <a className="carousel-control-prev" href="#carousel-levels" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only">Previous</span>
-              </a>
-              <a className="carousel-control-next" href="#carousel-levels" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="sr-only">Next</span>
-              </a>
-          </div>
-        </form>
+          </form>
         </div>
       </div>
     );
   }
 }
+
 
 export default SevenLevels;
