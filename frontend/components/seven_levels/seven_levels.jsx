@@ -168,7 +168,7 @@ class SevenLevels extends React.Component {
                     </a>
                   </h2>
 
-                  <div id='core' className='collapse' aria-labelledby='headingCore' data-parent='#accordionSevenLevels'>
+                  <div id='core' className='collapse show' aria-labelledby='headingCore' data-parent='#accordionSevenLevels'>
                     <div className='card-body'>
                       {core}
                     </div>
