@@ -25,6 +25,9 @@
     margin-left: 0px;
 }
 
+#sb-icon.active {
+    transform: rotate(180deg);
+}
 #content {
     margin-left: 0px;
     transition: all 0.3s;

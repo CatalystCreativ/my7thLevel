@@ -9,6 +9,7 @@ class Nav extends React.Component {
     $('#sidebarCollapse').on('click', () => {
       $('#sidebar').toggleClass('active');
       $('#content').toggleClass('active');
+      $('#sb-icon').toggleClass('active');
     });
   }
 
@@ -20,11 +21,7 @@ class Nav extends React.Component {
       navItems = (
         <div className='collapse navbar-collapse' id="navbarNav">
           <ul className='navbar-nav'>
-            <li className='nav-item'>
-              <button type='button' id='sidebarCollapse' className='btn btn-info'>
-                <span>My Seventh Levels</span>
-              </button>
-            </li>
+        
             <li className='nav-item'>
               <span className='navbar-text ml-3'>Logged in as {currentUserInfo.first_name}</span>
               {/* avatar icon <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg> */}
@@ -52,11 +49,16 @@ class Nav extends React.Component {
 
     return (
         <nav className='navbar navbar-expand-lg navbar-light bg-light shadow'>
-        <div className="container-fluid justify-content-between">
-            <Link className='navbar-brand' to='/'>7th Level</Link>
+          <div className="w-100 d-flex justify-content-between flex-row">
+            <div className='d-flex justify-content-around'>
+              <button type='button' id='sidebarCollapse' className='btn btn-info'>
+              <i id="sb-icon" className="fas fa-caret-right fa-lg" style={{transition: `0.3s`}}></i>
+              </button>
+              <Link className='navbar-brand ml-2' to='/'>7th Level</Link>
+            </div>
 
             <div>
-              <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbaNav' aria-expanded='false' aria-label='Toggle navigation'>
+              <button className='navbar-toggler' type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
                 <span className="navbar-toggler-icon"></span>
               </button>
 
