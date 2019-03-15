@@ -52,7 +52,7 @@ class Nav extends React.Component {
           <div className="w-100 d-flex justify-content-between flex-row">
             <div className='d-flex justify-content-around'>
               <button type='button' id='sidebarCollapse' className='btn btn-info'>
-              <i id="sb-icon" className="fas fa-caret-right fa-lg" style={{transition: `0.3s`}}></i>
+              <i id="sb-icon" className="fas fa-angle-right fa-lg" style={{transition: `0.3s`}}></i>
               </button>
               <Link className='navbar-brand ml-2' to='/'>7th Level</Link>
             </div>
