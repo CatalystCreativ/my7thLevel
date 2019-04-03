@@ -119,6 +119,7 @@ class SevenLevels extends React.Component {
     const stage3 = [];
     for(let i = 5; i < 7; i++) {
       stage3.push(
+      <div>
         <LevelComponent
           key={i}
           action={this.state[`action${i + 1}`]}
@@ -129,6 +130,7 @@ class SevenLevels extends React.Component {
           levelConsts={LEVELS[i]}
           levelInfo={LEVELS[i + 1]}
           />
+       </div>
       );
     }
 
@@ -146,7 +148,7 @@ class SevenLevels extends React.Component {
             <div className='container mb-4'>
               <div className='row justify-content-center flex-row'>
                 <input type="text" className='form-control p-4 col-md-5 col-sm-10' onChange={this.update('title')} id='title1' value={this.state.title} placeholder='What is your Seventh Level Title?'/>
-                <button className='btn btn-back ml-3 px-4' type='submit'>Create</button>
+                <button className='btn btn-back ml-3 px-4' type='submit'>Save</button>
               </div>
             </div>
 
@@ -161,7 +163,7 @@ class SevenLevels extends React.Component {
             <div className='accordion' id='accordionSevenLevels'>
 
               <div className='card'>
-                <div className='card-header' id='headingCore'>
+                <div className='card-header text-center' id='headingCore'>
                   <h2 className='mb-0'>
                     <a className='btn' role='button' data-toggle='collapse' href='#core'>
                       Core
