@@ -14,7 +14,7 @@ class Level extends React.Component {
 
     return (
       <div className="card">
-        <div className='card-header' id={`headingLevel${levelNum}`}>
+        <div className='card-header text-center' id={`headingLevel${levelNum}`}>
           <h2 className='mb-0'>
             <a className='btn' role='button' data-toggle='collapse' href={`#level${levelNum}`}>{`Level ${levelNum}`}</a>
           </h2>
