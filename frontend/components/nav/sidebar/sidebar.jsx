@@ -14,9 +14,9 @@ class Sidebar extends React.Component {
   componentDidMount() {
     this.fetchSeventhLevels();
 
-    $("#sidebar").mCustomScrollbar({
-      theme: "minimal"
-    });
+    // $("#sidebar").mCustomScrollbar({
+    //   theme: "minimal"
+    // });
 
 
   }
@@ -36,10 +36,10 @@ class Sidebar extends React.Component {
       );
     });
     return (
-      <nav className="nav d-flex flex-md-col align-items-start bg-dark shadow" id="sidebar" ref={elem => this.sidebar = elem}>
+      <nav className="nav d-flex flex-md-col justify-between align-items-start bg-dark shadow" id="sidebar" ref={elem => this.sidebar = elem}>
         <div className=" text-center flex-column w-100">
-          <div className="sidebar-header header-title">
-            <h3>My Seventh Levels</h3>
+          <div className="sidebar-header header-title m-3">
+            <h4>My Seventh Levels</h4>
           </div>
 
           <div className="bg-secondary shadow w-100">
