@@ -11,6 +11,15 @@ export const CORE = [
   "WHAT IS YOUR SEVENTH LEVEL PHRASE OR PURPOSE?"
 ];
 
+export const CORE_PLACEHOLDER = [
+  "I am...",
+  "I stand for...",
+  "I believe...",
+  "My narrative is...",
+  "I exist because...",
+  "My Seventh Level phrase or purpose is..."
+];
+
 //Stage 1: ATTRACT
 const LEVEL_ONE = {
   levelNum: "1",

@@ -1,4 +1,4 @@
-import { CORE, CORE_TOP_TEXT } from '../variables';
+import { CORE, CORE_TOP_TEXT, CORE_PLACEHOLDER } from '../variables';
 import React from 'react';
 
 class Core extends React.Component {
@@ -18,7 +18,7 @@ class Core extends React.Component {
             {question}
           </li>
           <li key={idx+1} className='list-group-item-light py-2 px-5'>
-            <input className='w-100' onChange={update(`core${idx + 1}`)}type="text" placeholder={CORE[idx]} value={core[idx]}></input>
+            <input className='w-100' onChange={update(`core${idx + 1}`)}type="text" placeholder={CORE_PLACEHOLDER[idx]} value={core[idx]}></input>
           </li>
         </>
       );
