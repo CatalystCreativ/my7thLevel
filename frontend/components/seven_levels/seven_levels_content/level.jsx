@@ -16,7 +16,7 @@ class Level extends React.Component {
       <div className="card">
         <div className='card-header text-center' id={`headingLevel${levelNum}`}>
           <h2 className='mb-0'>
-            <a className='btn' role='button' data-toggle='collapse' href={`#level${levelNum}`}>{`Level ${levelNum}`}</a>
+            <a className='btn' role='button' data-toggle='collapse' href={`#level${levelNum}`}>{`LEVEL ${levelNum}: ${levelTitle}`}</a>
           </h2>
         </div>
 
@@ -25,13 +25,7 @@ class Level extends React.Component {
             <div className="row d-flex justify-content-around mb-5">
               <div className="card-deck">
                 <div className="card text-white bg-dark">
-                  <div className="card-body">
-                    {levelNum}: {levelTitle}
-                  </div>
-                </div>
-
-                <div className="card text-white bg-dark">
-                  <div className="card-body">
+                  <div className="card-body card-body-width">
                     {levelDescription}
                   </div>
                 </div>

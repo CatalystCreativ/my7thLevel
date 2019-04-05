@@ -154,7 +154,7 @@ class SevenLevels extends React.Component {
 
             <div className='jumbotron jumbotron-fluid'>
               <div className='container'>
-                <h1 className='display-4'>Start with Seven</h1>
+                <h1 className='display-4'>START WITH SEVEN</h1>
                 <hr className='my-4'/>
                 <p className='lead'>{CORE_TOP_TEXT}</p>
               </div>
@@ -166,7 +166,7 @@ class SevenLevels extends React.Component {
                 <div className='card-header text-center' id='headingCore'>
                   <h2 className='mb-0'>
                     <a className='btn' role='button' data-toggle='collapse' href='#core'>
-                      Core
+                      CORE
                     </a>
                   </h2>
 

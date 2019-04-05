@@ -44,6 +44,10 @@
     padding: 0 !important;
 }
 
+.card-body-width {
+    width: 90vw !important;
+}
+
 .ml-3 {
     margin-left: 0 !important; 
 }
@@ -54,4 +58,8 @@
 
 .card-header {
     padding: 1.1rem 1.5rem !important;
+}
+
+.justify-content-around {
+    justify-content: space-evenly !important;
 }
