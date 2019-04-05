@@ -53,7 +53,7 @@ class Level extends React.Component {
 
               <div className="card col-5">
                 <div className="card-header card-header-border">
-                  Action:
+                  <strong>ACTION:</strong>
                 </div>
                 <div className="card-body card-full-border">
                     <textarea onChange={update(`action${levelNum}`)} className="w-100" value={action} cols="30" rows="10"></textarea>
@@ -83,7 +83,7 @@ class Level extends React.Component {
 
               <div className="card col-5">
                 <div className="card-header card-header-border">
-                  Questions:
+                  <strong>QUESTIONS:</strong>
                 </div>
                 <div className="card-body card-full-border">
                   <textarea onChange={update(`question${levelNum}`)} className="w-100" value={question} cols="30" rows="10"></textarea>
@@ -113,7 +113,7 @@ class Level extends React.Component {
 
               <div className="card col-5">
                 <div className="card-header card-header-border">
-                  Goals:
+                  <strong>GOALS:</strong>
                 </div>
                 <div className="card-body card-full-border">
                   <textarea onChange={update(`goal${levelNum}`)} className="w-100" value={goal} cols="30" rows="10"></textarea>
