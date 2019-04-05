@@ -14,17 +14,19 @@ class Level extends React.Component {
 
     return (
       <div className="card">
-        <div className='card-header text-center' id={`headingLevel${levelNum}`}>
-          <h2 className='mb-0'>
-            <a className='btn' role='button' data-toggle='collapse' href={`#level${levelNum}`}>{`LEVEL ${levelNum}: ${levelTitle}`}</a>
-          </h2>
-        </div>
+        <a role='button' data-toggle='collapse' href={`#level${levelNum}`}>
+          <div className='card-header text-center light-grey-color' id={`headingLevel${levelNum}`}>
+            <h2 className='mb-0'>
+              <div className="btn"><strong>{`LEVEL ${levelNum}: ${levelTitle}`}</strong></div>
+            </h2>
+          </div>
+        </a>
 
         <div id={`level${levelNum}`} className='collapse' aria-labelledby={`headingLevel${levelNum}`} data-parent='#accordionSevenLevels'>
           
             <div className="row d-flex justify-content-around mb-5">
               <div className="card-deck">
-                <div className="card text-black bg-dark teal-color">
+                <div className="card text-black bg-dark light-grey-color">
                   <div className="card-body card-body-width">
                     {levelDescription}
                   </div>
@@ -122,7 +124,7 @@ class Level extends React.Component {
             </div>
             <div className='container mb-4'>
               <div className='row justify-content-center flex-row'>
-                <button className='btn btn-back ml-3 px-4' type='submit'>Save</button>
+                <button className='btn btn-back ml-3 px-4' type='submit'><strong>SAVE</strong></button>
               </div>
             </div>
         </div>

@@ -84,10 +84,26 @@
     margin-right: 5px;
 }
 
-.teal-color {
-    background-color: #3EC2CF !important; 
+.light-grey-color {
+    background-color: #EEF0F1 !important; 
 }
-.list-group-item {
+
+.font-size-24 {
+    font-size: 24px !important;
+}
+
+.font-size-60 {
+    font-size: 48px !important;
+    margin-bottom: 20px !important;
+    margin-top: 5px !important;
+}
+
+.jumbotron {
+    background-color: #3EC2CF !important;
+    margin-bottom: 0 !important;
+    border-top: .4mm solid black;
+    border-bottom: .4mm solid black;
+}.list-group-item {
     padding: 0.35rem 1.25rem !important; 
     min-height: 35px;
 }

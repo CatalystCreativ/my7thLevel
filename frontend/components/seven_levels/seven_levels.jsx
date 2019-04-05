@@ -73,22 +73,22 @@ class SevenLevels extends React.Component {
   render() {
     const stage1Buffer = (
       <div className='card-header card-header-buffer text-center' id='headingCore'>
-                  <a className='mb-0'>
-                      STAGE 1
+                  <a className='mb-0 font-size-24'>
+                    <strong>STAGE 1: ATTRACT</strong>
                   </a>
       </div>
     )
     const stage2Buffer = (
       <div className='card-header card-header-buffer text-center' id='headingCore'>
-                  <a className='mb-0'>
-                      STAGE 2
+                  <a className='mb-0 font-size-24'>
+                    <strong>STAGE 2: ENGAGE</strong>
                   </a>
       </div>
     )
     const stage3Buffer = (
       <div className='card-header card-header-buffer text-center' id='headingCore'>
-                  <a className='mb-0'>
-                      STAGE 3
+                  <a className='mb-0 font-size-24'>
+                    <strong>STAGE 3: DELIGHT</strong>
                   </a>
       </div>
     )
@@ -167,15 +167,19 @@ class SevenLevels extends React.Component {
 
           <form className='pt-4' onSubmit={this.handleSubmit()}>
             <div className='container mb-4'>
+              <div className='row justify-content-center font-size-60'>
+                <strong>{this.state.title}</strong>
+              </div>
               <div className='row justify-content-center flex-row'>
                 <input type="text" className='form-control p-4 col-md-5 col-sm-10' onChange={this.update('title')} id='title1' value={this.state.title} placeholder='What is your Seventh Level Title?'/>
-                <button className='btn btn-back ml-3 px-4' type='submit'>Save</button>
+                <button className='btn btn-back ml-3 px-4' type='submit'><strong>SAVE</strong></button>
               </div>
+              <br></br>
             </div>
 
             <div className='jumbotron jumbotron-fluid'>
               <div className='container'>
-                <h1 className='display-4'>START WITH SEVEN</h1>
+                <h1 className='display-4'><strong>START WITH SEVEN</strong></h1>
                 <hr className='my-4'/>
                 <p className='lead'>{CORE_TOP_TEXT}</p>
               </div>
@@ -185,11 +189,11 @@ class SevenLevels extends React.Component {
 
               <div className='card'>
                 <div className='card-header text-center' id='headingCore'>
-                  <h2 className='mb-0'>
-                    <a className='btn' role='button' data-toggle='collapse' href='#core'>
-                      CORE
-                    </a>
-                  </h2>
+                  <a role='button' data-toggle='collapse' href='#core'>
+                    <h2 className='mb-0'>
+                        <div className="btn"><strong>CORE</strong></div>
+                    </h2>
+                  </a>
 
                   <div id='core' className='collapse show' aria-labelledby='headingCore' data-parent='#accordionSevenLevels'>
                     <div className='card-body'>
