@@ -16309,3 +16309,668 @@ puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
 puma (3.12.0) lib/puma/server.rb:472:in `process_client'
 puma (3.12.0) lib/puma/server.rb:332:in `block in run'
 puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-04-05 00:41:01 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/apollos/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 784ms (Views: 779.1ms | ActiveRecord: 3.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/base/reset.scss"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/base/reset.scss"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/users" for 127.0.0.1 at 2019-04-05 09:41:07 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"apolloskim94@gmail.com", "password"=>"[FILTERED]", "first_name"=>"Apollo", "last_name"=>"Kim", "organization"=>"app academy"}}
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Exists (37.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "apolloskim94@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[36mUser Create (7.7ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "password_digest", "session_token", "created_at", "updated_at", "organization") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["first_name", "Apollo"], ["last_name", "Kim"], ["email", "apolloskim94@gmail.com"], ["password_digest", "$2a$10$2EZGHAMI0xscNDg0BpobrOWg2BgtjTVVXYJm8fTT.TbNtR6GU3LXO"], ["session_token", "n66vvwuOeJz16aATlecp-w"], ["created_at", "2019-04-05 13:41:07.393794"], ["updated_at", "2019-04-05 13:41:07.393794"], ["organization", "app academy"]]
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (39.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[35m (57.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mSeventhLevel Load (2.0ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[36mSeventhLevel Create (1.5ms)[0m  [1m[32mINSERT INTO "seventh_levels" ("phrase", "core1", "core2", "core3", "core4", "core5", "action1", "question1", "goal1", "action2", "question2", "goal2", "action3", "question3", "goal3", "action4", "question4", "goal4", "action5", "question5", "goal5", "action6", "question6", "goal6", "action7", "question7", "goal7", "user_id", "created_at", "updated_at", "notes", "title") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31, $32) RETURNING "id"[0m  [["phrase", ""], ["core1", ""], ["core2", ""], ["core3", ""], ["core4", ""], ["core5", ""], ["action1", ""], ["question1", ""], ["goal1", ""], ["action2", ""], ["question2", ""], ["goal2", ""], ["action3", ""], ["question3", ""], ["goal3", ""], ["action4", ""], ["question4", ""], ["goal4", ""], ["action5", ""], ["question5", ""], ["goal5", ""], ["action6", ""], ["question6", ""], ["goal6", ""], ["action7", ""], ["question7", ""], ["goal7", ""], ["user_id", 2], ["created_at", "2019-04-05 13:41:07.658378"], ["updated_at", "2019-04-05 13:41:07.658378"], ["notes", ""], ["title", ""]]
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "apolloskim94@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (45.0ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "QMoILkZGxabprNBjKYhgAA"], ["updated_at", "2019-04-05 13:41:07.664159"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered api/users/show.json.jbuilder (10.7ms)
+Completed 200 OK in 562ms (Views: 18.7ms | ActiveRecord: 297.5ms)
+
+
+Started GET "/api/seventh_levels" for 127.0.0.1 at 2019-04-05 09:41:07 -0400
+Processing by Api::SeventhLevelsController#index as JSON
+  [1m[36mUser Load (35.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QMoILkZGxabprNBjKYhgAA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering api/seventh_levels/index.json.jbuilder
+  [1m[36mSeventhLevel Load (0.4ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/api/seventh_levels/index.json.jbuilder:1
+  Rendered api/seventh_levels/index.json.jbuilder (3.0ms)
+Completed 200 OK in 52ms (Views: 8.8ms | ActiveRecord: 37.8ms)
+
+
+Started GET "/api/seventh_levels/null" for 127.0.0.1 at 2019-04-05 09:41:07 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"null"}
+  [1m[36mSeventhLevel Load (0.3ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find SeventhLevel with 'id'=null:
+  app/controllers/api/seventh_levels_controller.rb:8:in `show'
+
+Started GET "/api/seventh_levels/null" for 127.0.0.1 at 2019-04-05 09:41:07 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"null"}
+  [1m[36mSeventhLevel Load (0.5ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find SeventhLevel with 'id'=null:
+  app/controllers/api/seventh_levels_controller.rb:8:in `show'
+
+Started GET "/" for 127.0.0.1 at 2019-04-05 09:48:24 -0400
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QMoILkZGxabprNBjKYhgAA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_page/root.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 407ms (Views: 399.8ms | ActiveRecord: 5.2ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/base/reset.scss"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/seventh_levels" for 127.0.0.1 at 2019-04-05 09:48:25 -0400
+Processing by Api::SeventhLevelsController#index as JSON
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QMoILkZGxabprNBjKYhgAA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering api/seventh_levels/index.json.jbuilder
+  [1m[36mSeventhLevel Load (1.0ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/api/seventh_levels/index.json.jbuilder:1
+  Rendered api/seventh_levels/index.json.jbuilder (6.1ms)
+Completed 200 OK in 20ms (Views: 8.5ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/api/seventh_levels/null" for 127.0.0.1 at 2019-04-05 09:48:26 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"null"}
+  [1m[36mSeventhLevel Load (1.3ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+Completed 404 Not Found in 3ms (ActiveRecord: 1.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find SeventhLevel with 'id'=null:
+  app/controllers/api/seventh_levels_controller.rb:8:in `show'
+
+Started GET "/api/seventh_levels/null" for 127.0.0.1 at 2019-04-05 09:48:26 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"null"}
+  [1m[36mSeventhLevel Load (0.8ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+Completed 404 Not Found in 3ms (ActiveRecord: 0.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find SeventhLevel with 'id'=null:
+  app/controllers/api/seventh_levels_controller.rb:8:in `show'
+
+Started GET "/api/seventh_levels/null" for 127.0.0.1 at 2019-04-05 09:48:35 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"null"}
+  [1m[36mSeventhLevel Load (0.5ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.5ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find SeventhLevel with 'id'=null:
+  app/controllers/api/seventh_levels_controller.rb:8:in `show'
+
+Started GET "/api/seventh_levels/null" for 127.0.0.1 at 2019-04-05 09:48:36 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"null"}
+  [1m[36mSeventhLevel Load (0.8ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+Completed 404 Not Found in 2ms (ActiveRecord: 0.8ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find SeventhLevel with 'id'=null:
+  app/controllers/api/seventh_levels_controller.rb:8:in `show'
+
+Started POST "/api/seventh_levels" for 127.0.0.1 at 2019-04-05 09:49:34 -0400
+Processing by Api::SeventhLevelsController#create as JSON
+  Parameters: {"seventh_level"=>{"title"=>"New Seventh Level", "phrase"=>"", "core1"=>"", "core2"=>"", "core3"=>"", "core4"=>"", "core5"=>"", "action1"=>"", "question1"=>"", "goal1"=>"", "action2"=>"", "question2"=>"", "goal2"=>"", "action3"=>"", "question3"=>"", "goal3"=>"", "action4"=>"", "question4"=>"", "goal4"=>"", "action5"=>"", "question5"=>"", "goal5"=>"", "action6"=>"", "question6"=>"", "goal6"=>"", "action7"=>"", "question7"=>"", "goal7"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QMoILkZGxabprNBjKYhgAA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/seventh_levels_controller.rb:19
+  [1m[36mSeventhLevel Create (0.8ms)[0m  [1m[32mINSERT INTO "seventh_levels" ("phrase", "core1", "core2", "core3", "core4", "core5", "action1", "question1", "goal1", "action2", "question2", "goal2", "action3", "question3", "goal3", "action4", "question4", "goal4", "action5", "question5", "goal5", "action6", "question6", "goal6", "action7", "question7", "goal7", "user_id", "created_at", "updated_at", "title") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31) RETURNING "id"[0m  [["phrase", ""], ["core1", ""], ["core2", ""], ["core3", ""], ["core4", ""], ["core5", ""], ["action1", ""], ["question1", ""], ["goal1", ""], ["action2", ""], ["question2", ""], ["goal2", ""], ["action3", ""], ["question3", ""], ["goal3", ""], ["action4", ""], ["question4", ""], ["goal4", ""], ["action5", ""], ["question5", ""], ["goal5", ""], ["action6", ""], ["question6", ""], ["goal6", ""], ["action7", ""], ["question7", ""], ["goal7", ""], ["user_id", 2], ["created_at", "2019-04-05 13:49:34.942619"], ["updated_at", "2019-04-05 13:49:34.942619"], ["title", "New Seventh Level"]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:19
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/seventh_levels_controller.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/seventh_levels_controller.rb:21
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "apolloskim94@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:21
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "recent_seventh_level_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["recent_seventh_level_id", 3], ["updated_at", "2019-04-05 13:49:34.950079"], ["id", 2]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/seventh_levels_controller.rb:21
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.4ms)
+  Rendered api/seventh_levels/show.json.jbuilder (3.8ms)
+Completed 200 OK in 23ms (Views: 9.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/api/seventh_levels/null" for 127.0.0.1 at 2019-04-05 09:49:34 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"null"}
+  [1m[36mSeventhLevel Load (0.5ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+Completed 404 Not Found in 3ms (ActiveRecord: 0.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find SeventhLevel with 'id'=null:
+  app/controllers/api/seventh_levels_controller.rb:8:in `show'
+
+Started GET "/api/seventh_levels/3" for 127.0.0.1 at 2019-04-05 09:49:35 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mSeventhLevel Load (0.7ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.6ms)
+  Rendered api/seventh_levels/show.json.jbuilder (3.1ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/seventh_levels/3" for 127.0.0.1 at 2019-04-05 09:49:35 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mSeventhLevel Load (0.6ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.6ms)
+  Rendered api/seventh_levels/show.json.jbuilder (2.7ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/api/seventh_levels" for 127.0.0.1 at 2019-04-05 09:49:40 -0400
+Processing by Api::SeventhLevelsController#create as JSON
+  Parameters: {"seventh_level"=>{"title"=>"New Seventh Level", "phrase"=>"", "core1"=>"", "core2"=>"", "core3"=>"", "core4"=>"", "core5"=>"", "action1"=>"", "question1"=>"", "goal1"=>"", "action2"=>"", "question2"=>"", "goal2"=>"", "action3"=>"", "question3"=>"", "goal3"=>"", "action4"=>"", "question4"=>"", "goal4"=>"", "action5"=>"", "question5"=>"", "goal5"=>"", "action6"=>"", "question6"=>"", "goal6"=>"", "action7"=>"", "question7"=>"", "goal7"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QMoILkZGxabprNBjKYhgAA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/seventh_levels_controller.rb:19
+  [1m[36mSeventhLevel Create (0.5ms)[0m  [1m[32mINSERT INTO "seventh_levels" ("phrase", "core1", "core2", "core3", "core4", "core5", "action1", "question1", "goal1", "action2", "question2", "goal2", "action3", "question3", "goal3", "action4", "question4", "goal4", "action5", "question5", "goal5", "action6", "question6", "goal6", "action7", "question7", "goal7", "user_id", "created_at", "updated_at", "title") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18, $19, $20, $21, $22, $23, $24, $25, $26, $27, $28, $29, $30, $31) RETURNING "id"[0m  [["phrase", ""], ["core1", ""], ["core2", ""], ["core3", ""], ["core4", ""], ["core5", ""], ["action1", ""], ["question1", ""], ["goal1", ""], ["action2", ""], ["question2", ""], ["goal2", ""], ["action3", ""], ["question3", ""], ["goal3", ""], ["action4", ""], ["question4", ""], ["goal4", ""], ["action5", ""], ["question5", ""], ["goal5", ""], ["action6", ""], ["question6", ""], ["goal6", ""], ["action7", ""], ["question7", ""], ["goal7", ""], ["user_id", 2], ["created_at", "2019-04-05 13:49:40.638971"], ["updated_at", "2019-04-05 13:49:40.638971"], ["title", "New Seventh Level"]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:19
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/seventh_levels_controller.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/seventh_levels_controller.rb:21
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "apolloskim94@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:21
+  [1m[36mUser Update (1.6ms)[0m  [1m[33mUPDATE "users" SET "recent_seventh_level_id" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["recent_seventh_level_id", 4], ["updated_at", "2019-04-05 13:49:40.644180"], ["id", 2]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:21
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/seventh_levels_controller.rb:21
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.3ms)
+  Rendered api/seventh_levels/show.json.jbuilder (1.7ms)
+Completed 200 OK in 21ms (Views: 6.8ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/seventh_levels/4" for 127.0.0.1 at 2019-04-05 09:49:40 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSeventhLevel Load (0.8ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.4ms)
+  Rendered api/seventh_levels/show.json.jbuilder (3.5ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/seventh_levels/4" for 127.0.0.1 at 2019-04-05 09:49:40 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSeventhLevel Load (1.1ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.5ms)
+  Rendered api/seventh_levels/show.json.jbuilder (2.4ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/seventh_levels/3" for 127.0.0.1 at 2019-04-05 09:49:42 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mSeventhLevel Load (0.4ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.3ms)
+  Rendered api/seventh_levels/show.json.jbuilder (1.7ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/seventh_levels/3" for 127.0.0.1 at 2019-04-05 09:49:42 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"3"}
+  [1m[36mSeventhLevel Load (0.4ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.4ms)
+  Rendered api/seventh_levels/show.json.jbuilder (1.9ms)
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/seventh_levels/4" for 127.0.0.1 at 2019-04-05 09:49:43 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSeventhLevel Load (0.3ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.4ms)
+  Rendered api/seventh_levels/show.json.jbuilder (1.9ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/seventh_levels/4" for 127.0.0.1 at 2019-04-05 09:49:43 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSeventhLevel Load (0.7ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.4ms)
+  Rendered api/seventh_levels/show.json.jbuilder (1.6ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-05 09:49:46 -0400
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QMoILkZGxabprNBjKYhgAA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_page/root.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 57ms (Views: 55.1ms | ActiveRecord: 0.3ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/base/reset.scss"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/seventh_levels" for 127.0.0.1 at 2019-04-05 09:49:47 -0400
+Processing by Api::SeventhLevelsController#index as JSON
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QMoILkZGxabprNBjKYhgAA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering api/seventh_levels/index.json.jbuilder
+  [1m[36mSeventhLevel Load (0.9ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/api/seventh_levels/index.json.jbuilder:1
+  Rendered api/seventh_levels/index.json.jbuilder (7.9ms)
+Completed 200 OK in 21ms (Views: 9.7ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/api/seventh_levels/4" for 127.0.0.1 at 2019-04-05 09:49:47 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSeventhLevel Load (1.1ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.4ms)
+  Rendered api/seventh_levels/show.json.jbuilder (1.5ms)
+Completed 200 OK in 9ms (Views: 6.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/seventh_levels/4" for 127.0.0.1 at 2019-04-05 09:49:47 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSeventhLevel Load (1.0ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.5ms)
+  Rendered api/seventh_levels/show.json.jbuilder (1.6ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/seventh_levels/4" for 127.0.0.1 at 2019-04-05 09:49:47 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSeventhLevel Load (0.6ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.4ms)
+  Rendered api/seventh_levels/show.json.jbuilder (1.7ms)
+Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-05 09:50:02 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/apollos/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QMoILkZGxabprNBjKYhgAA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered api/users/_user.json.jbuilder (1.1ms)
+  Rendered static_page/root.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 1175ms (Views: 1165.6ms | ActiveRecord: 8.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/base/reset.scss"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/api/seventh_levels" for 127.0.0.1 at 2019-04-05 09:50:05 -0400
+Processing by Api::SeventhLevelsController#index as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QMoILkZGxabprNBjKYhgAA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering api/seventh_levels/index.json.jbuilder
+  [1m[36mSeventhLevel Load (0.9ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/api/seventh_levels/index.json.jbuilder:1
+  Rendered api/seventh_levels/index.json.jbuilder (60.8ms)
+Started GET "/api/seventh_levels/4" for 127.0.0.1 at 2019-04-05 09:50:05 -0400
+Completed 200 OK in 84ms (Views: 55.1ms | ActiveRecord: 22.8ms)
+
+
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSeventhLevel Load (1.8ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.4ms)
+  Rendered api/seventh_levels/show.json.jbuilder (1.7ms)
+Completed 200 OK in 16ms (Views: 9.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/seventh_levels/4" for 127.0.0.1 at 2019-04-05 09:50:05 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSeventhLevel Load (0.7ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (1.0ms)
+  Rendered api/seventh_levels/show.json.jbuilder (3.8ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/seventh_levels/4" for 127.0.0.1 at 2019-04-05 09:50:05 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSeventhLevel Load (0.6ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.9ms)
+  Rendered api/seventh_levels/show.json.jbuilder (3.4ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.6ms)
+
+
+Started DELETE "/api/session" for 127.0.0.1 at 2019-04-05 09:50:11 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "QMoILkZGxabprNBjKYhgAA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "apolloskim94@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "sDu9QM8tJ1ePkEgqtg7LjQ"], ["updated_at", "2019-04-05 13:50:11.464719"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (40.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+Completed 200 OK in 47ms (Views: 0.2ms | ActiveRecord: 42.3ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2019-04-05 09:50:17 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"apolloskim94@gmail.com", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "organization"=>""}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "apolloskim94@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "apolloskim94@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "n2ywX8qazlb8YXSTreZeDg"], ["updated_at", "2019-04-05 13:50:17.471140"], ["id", 2]]
+  ↳ app/models/user.rb:36
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.1ms)
+Completed 200 OK in 73ms (Views: 6.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/api/seventh_levels" for 127.0.0.1 at 2019-04-05 09:50:17 -0400
+Processing by Api::SeventhLevelsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "n2ywX8qazlb8YXSTreZeDg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering api/seventh_levels/index.json.jbuilder
+  [1m[36mSeventhLevel Load (0.4ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/views/api/seventh_levels/index.json.jbuilder:1
+  Rendered api/seventh_levels/index.json.jbuilder (2.9ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/seventh_levels/4" for 127.0.0.1 at 2019-04-05 09:50:17 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSeventhLevel Load (0.5ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.7ms)
+  Rendered api/seventh_levels/show.json.jbuilder (2.6ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/seventh_levels/4" for 127.0.0.1 at 2019-04-05 09:50:17 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSeventhLevel Load (0.5ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.9ms)
+  Rendered api/seventh_levels/show.json.jbuilder (2.5ms)
+Completed 200 OK in 12ms (Views: 9.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/seventh_levels/4" for 127.0.0.1 at 2019-04-05 09:50:17 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"4"}
+  [1m[36mSeventhLevel Load (7.7ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+  Rendering api/seventh_levels/show.json.jbuilder
+  Rendered api/seventh_levels/_seventh_level.json.jbuilder (0.5ms)
+  Rendered api/seventh_levels/show.json.jbuilder (1.7ms)
+Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 7.7ms)
+
+
