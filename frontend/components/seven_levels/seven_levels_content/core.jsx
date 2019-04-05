@@ -27,7 +27,6 @@ class Core extends React.Component {
     return (
       <div className="container-fluid">
         <ul className='list-group'>
-          
           {coreTexts}
         </ul>
         <div className='container mb-4'>
