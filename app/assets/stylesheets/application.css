@@ -14,4 +14,4 @@
  *= require_self
  */
 
- @import "base/base.scss";
+ @import "base/reset.scss";
