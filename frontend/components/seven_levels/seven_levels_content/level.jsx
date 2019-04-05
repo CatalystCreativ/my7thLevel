@@ -24,7 +24,7 @@ class Level extends React.Component {
           
             <div className="row d-flex justify-content-around mb-5">
               <div className="card-deck">
-                <div className="card text-white bg-dark">
+                <div className="card text-black bg-dark teal-color">
                   <div className="card-body card-body-width">
                     {levelDescription}
                   </div>
