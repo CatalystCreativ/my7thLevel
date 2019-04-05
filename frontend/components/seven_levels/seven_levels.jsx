@@ -163,7 +163,7 @@ class SevenLevels extends React.Component {
             <div className='accordion' id='accordionSevenLevels'>
 
               <div className='card'>
-                <div className='card-header card-full-border text-center' id='headingCore'>
+                <div className='card-header text-center' id='headingCore'>
                   <h2 className='mb-0'>
                     <a className='btn' role='button' data-toggle='collapse' href='#core'>
                       CORE
