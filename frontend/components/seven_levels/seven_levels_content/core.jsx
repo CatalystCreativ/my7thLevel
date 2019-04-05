@@ -30,6 +30,11 @@ class Core extends React.Component {
           
           {coreTexts}
         </ul>
+        <div className='container mb-4'>
+          <div className='row justify-content-center flex-row'>
+            <button className='btn btn-back ml-3 px-4' type='submit'>Save</button>
+          </div>
+        </div>
       </div>
     );
   }
