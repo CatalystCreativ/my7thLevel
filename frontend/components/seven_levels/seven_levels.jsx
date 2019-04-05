@@ -71,6 +71,27 @@ class SevenLevels extends React.Component {
   }
 
   render() {
+    const stage1Buffer = (
+      <div className='card-header card-header-buffer text-center' id='headingCore'>
+                  <a className='mb-0'>
+                      STAGE 1
+                  </a>
+      </div>
+    )
+    const stage2Buffer = (
+      <div className='card-header card-header-buffer text-center' id='headingCore'>
+                  <a className='mb-0'>
+                      STAGE 2
+                  </a>
+      </div>
+    )
+    const stage3Buffer = (
+      <div className='card-header card-header-buffer text-center' id='headingCore'>
+                  <a className='mb-0'>
+                      STAGE 3
+                  </a>
+      </div>
+    )
     const core = (
       <Core
         phrase={this.state.phrase}
@@ -179,10 +200,13 @@ class SevenLevels extends React.Component {
               </div>
 
               {/* Stage 1 */}
+              {stage1Buffer}
               {stage1}
               {/* Stage 2 */}
+              {stage2Buffer}
               {stage2}
               {/* Stage 3 */}
+              {stage3Buffer}
               {stage3}
 
             </div>
