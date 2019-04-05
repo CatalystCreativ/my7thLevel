@@ -46,6 +46,7 @@
 
 .card-body-width {
     width: 90vw !important;
+    text-align: center !important;
 }
 
 .ml-3 {
@@ -60,6 +61,19 @@
     padding: 1.1rem 1.5rem !important;
 }
 
+.card-full-border {
+    border: .63mm solid black !important;
+}
+
+.card-header-border {
+    border: .63mm solid black !important;
+    border-bottom: 0mm !important;
+} 
+
 .justify-content-around {
     justify-content: space-evenly !important;
+}
+
+.navbar-text {
+    margin-right: 5px;
 }

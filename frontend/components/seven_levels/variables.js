@@ -1,7 +1,7 @@
 // CORE Front text
 export const CORE_TOP_TEXT = "When leveraging the Seventh Level Engagement Framework, it is vital for you (as an individual or company) to start at level seven.  What do we mean by that?  Identifying, authentically living and being able to communicate your values is a mandatory first step before you can meaningfully connect with your audience.  Know your own narrative, then you work towards getting others to engage with you at the highest level."
 
-// CORE QUESTIONS
+// CORE qUESTIONS
 export const CORE = [
   "WHO ARE YOU?",
   "WHAT DO YOU STAND FOR?",
@@ -24,14 +24,14 @@ export const CORE_PLACEHOLDER = [
 const LEVEL_ONE = {
   levelNum: "1",
   levelTitle: "DISENGAGEMENT",
-  levelDescription: "Characterized by a person showing disinterest; they're completely idle and avoid tasks,interactions or attempts at communication",
+  levelDescription: "Characterized by a person showing disinterest; they're completely idle and avoid tasks, interactions or attempts at communication",
   actionDescription: "Define the action that represents this level for you/your company",
   actionExamples: [
     "A six year old ignores their teacher when they ask a question to the class.",
     "My employee is not acknowledging or opening my emails.",
     "No one is clicking on our instagram ads."
   ],
-  questionDescription: "List the Questions associated with those actions",
+  questionDescription: "List the questions associated with those actions",
   questionExamples: [
     "Have I ever asked my employees how they like to be communicated with?",
     "Am I reaching out during the right time of day/week?",
@@ -54,7 +54,7 @@ const LEVEL_TWO = {
     "I can see people read my email, but no one reached out for more information.",
     "Audience are visiting my website, but don't make it past the homepage."
   ],
-  questionDescription: "List the Questions associated with those actions",
+  questionDescription: "List the questions associated with those actions",
   questionExamples: [
     "Do I use jargon or technical language too often?",
     "Is my messaging clear concise and simple?",
@@ -78,7 +78,7 @@ const LEVEL_THREE = {
     "Audiences click on the purchase button in my ad, but then don't get to my website.",
     "A friend shows interest in spending time with you, but you're always busy."
   ],
-  questionDescription: "List the Questions associated with those actions",
+  questionDescription: "List the questions associated with those actions",
   questionExamples: [
     "Are their too many steps or are the steps to join too difficult?",
     "Does my website load quickly enough?",
@@ -102,7 +102,7 @@ const LEVEL_FOUR = {
     "My employees will attend a non-mandatory virtual training fo HR.",
     "My followers will like my post but not share it."
   ],
-  questionDescription: "List the Questions associated with those actions",
+  questionDescription: "List the questions associated with those actions",
   questionExamples: [
     "Am I providing enough of an incentive or connection that it excites people to participates?",
     "What kind of engagement am I looking for?",
@@ -126,7 +126,7 @@ const LEVEL_FIVE = {
     "My employees will volunteer for a special project if they'll earn an extra vacation day.",
     "People will comment on my post if they can win tickets ti meet their favorite influencer."
   ],
-  questionDescription: "List the Questions associated with those actions",
+  questionDescription: "List the questions associated with those actions",
   questionExamples: [
     "Am I offering the right incentive to boost the type of engagement I am looking for?",
     "How am I leveraging this giveaway or partnership to increase brand awareness or drive traffic?",
@@ -152,7 +152,7 @@ const LEVEL_SIX = {
   "Our hotel is committed to sustainability and we hear stories of how our guests change their habits after staying in our property and seeing how we manage things.",
   "My mentor shared her story of how shortening her meetings to 45 minutes changed her work life and it inspired me to do the same."
 ],
-  questionDescription: "List the Questions associated with those actions",
+  questionDescription: "List the questions associated with those actions",
   questionExamples: [
     "What do I stand for?",
     "Why does what I or my company matter?",
@@ -176,7 +176,7 @@ const LEVEL_SEVEN = {
     "My employees will tell anyone they meet about the company as though we are a family.",
     "My costumers post about my products without me asking them to."
   ],
-  questionDescription: "List the Questions associated with those actions",
+  questionDescription: "List the questions associated with those actions",
   questionExamples: [
     "How am I delighting this level of people?",
     "How am I using my message to emotionally connect with people?",
