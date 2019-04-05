@@ -14,7 +14,7 @@ class Level extends React.Component {
 
     return (
       <div className="card">
-        <div className='card-header text-center' id={`headingLevel${levelNum}`}>
+        <div className='card-header card-full-border text-center' id={`headingLevel${levelNum}`}>
           <h2 className='mb-0'>
             <a className='btn' role='button' data-toggle='collapse' href={`#level${levelNum}`}>{`LEVEL ${levelNum}: ${levelTitle}`}</a>
           </h2>
@@ -33,13 +33,12 @@ class Level extends React.Component {
             </div>
             <div className="row d-flex justify-content-around mb-5">
               <div className="card col-5">
-                <div className="card-header">
-                  Action
+                <div className="card-header card-header-border">
                   <div className="card-title">
                     {actionDescription}
                   </div>
                 </div>
-                <div className="card-body">
+                <div className="card-body card-full-border">
                   <ol>
                     {actionExamples.map((example, idx) => {
                       return (
@@ -53,10 +52,10 @@ class Level extends React.Component {
               </div>
 
               <div className="card col-5">
-                <div className="card-header">
+                <div className="card-header card-header-border">
                   Action:
                 </div>
-                <div className="card-body">
+                <div className="card-body card-full-border">
                     <textarea onChange={update(`action${levelNum}`)} className="w-100" value={action} cols="30" rows="10"></textarea>
                 </div>
               </div>
@@ -64,13 +63,12 @@ class Level extends React.Component {
             
             <div className="row justify-content-around mb-5">
               <div className="card col-5">
-                <div className="card-header">
-                  Questions
+                <div className="card-header card-header-border">
                   <div className="card-title">
                     {questionDescription}
                   </div>
                 </div>
-                <div className="card-body">
+                <div className="card-body card-full-border">
                   <ol>
                     {questionExamples.map((example, idx) => {
                       return (
@@ -84,10 +82,10 @@ class Level extends React.Component {
               </div>
 
               <div className="card col-5">
-                <div className="card-header">
+                <div className="card-header card-header-border">
                   Questions:
                 </div>
-                <div className="card-body">
+                <div className="card-body card-full-border">
                   <textarea onChange={update(`question${levelNum}`)} className="w-100" value={question} cols="30" rows="10"></textarea>
                 </div>
               </div>
@@ -95,13 +93,12 @@ class Level extends React.Component {
 
             <div className="row justify-content-around mb-5">
               <div className="card col-5">
-                <div className="card-header">
-                  Goals
+                <div className="card-header card-header-border">
                   <div className="card-title">
                     {goalDescription}
                   </div>
                 </div>
-                <div className="card-body">
+                <div className="card-body card-full-border">
                   <ol>
                     {goalExamples.map((example, idx) => {
                       return (
@@ -115,10 +112,10 @@ class Level extends React.Component {
               </div>
 
               <div className="card col-5">
-                <div className="card-header">
+                <div className="card-header card-header-border">
                   Goals:
                 </div>
-                <div className="card-body">
+                <div className="card-body card-full-border">
                   <textarea onChange={update(`goal${levelNum}`)} className="w-100" value={goal} cols="30" rows="10"></textarea>
                 </div>
               </div>
