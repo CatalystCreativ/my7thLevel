@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter, Link, Redirect } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 
 class Sidebar extends React.Component {
@@ -9,6 +9,7 @@ class Sidebar extends React.Component {
     this.createSeventhLevel = this.props.createSeventhLevel;
 
     this.newSeventhLevel = this.newSeventhLevel.bind(this);
+    this.renderNew7thLevel = this.renderNew7thLevel.bind(this);
   }
 
   componentDidMount() {
@@ -26,12 +27,20 @@ class Sidebar extends React.Component {
     this.props.history.push(`/home/${response.seventhLevel.id}`)});
   }
 
+  renderNew7thLevel(id) {
+    return () => {
+      this.props.history.push(`/home/${id}`);
+    };
+  }
+  // <Link className="text-white" to={`/home/${seventhLevel.id}`}>{seventhLevel.title}</Link>
+
   render() {
   const seventhLevelsValues = Object.values(this.props.seventhLevels);
     const seventhLevels = seventhLevelsValues.map((seventhLevel, idx) => {
+      const klass = idx % 2 === 1 ? "list-group-item bg-dark" : "list-group-item bg-secondary";
       return (
-        <li key={idx} className="list-group-item bg-secondary">
-          <Link className="text-white" to={`/home/${seventhLevel.id}`}>{seventhLevel.title}</Link>
+        <li key={idx} onClick={this.renderNew7thLevel(seventhLevel.id)} className={klass}>
+          {seventhLevel.title}
         </li>
       );
     });
