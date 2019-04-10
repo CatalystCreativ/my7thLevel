@@ -16974,3 +16974,126 @@ Processing by Api::SeventhLevelsController#show as JSON
 Completed 200 OK in 16ms (Views: 7.0ms | ActiveRecord: 7.7ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-04-10 11:53:45 -0400
+  [1m[35m (12.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/avichaivazana/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by StaticPageController#root as HTML
+  Rendering static_page/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered static_page/root.html.erb within layouts/application (28.8ms)
+Completed 200 OK in 4029ms (Views: 4021.3ms | ActiveRecord: 4.2ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/base/reset.scss"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:65:in `block (3 levels) in broadcast'
+activesupport (5.2.2) lib/active_support/logger_silence.rb:21:in `silence'
+activesupport (5.2.2) lib/active_support/logger.rb:63:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/api/session" for 127.0.0.1 at 2019-04-10 11:53:59 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"testing@testing.com", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "organization"=>""}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testing@testing.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+Completed 422 Unprocessable Entity in 423ms (Views: 0.4ms | ActiveRecord: 305.5ms)
+
+
+Started POST "/api/session" for 127.0.0.1 at 2019-04-10 11:54:06 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"testing@testing.com", "password"=>"[FILTERED]", "first_name"=>"", "last_name"=>"", "organization"=>""}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "testing@testing.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:30
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "testing@testing.com"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "3Cn1M0AUMaIOETglfQaKLA"], ["updated_at", "2019-04-10 15:54:06.477566"], ["id", 18]]
+  ↳ app/models/user.rb:36
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered api/users/show.json.jbuilder (12.6ms)
+Completed 200 OK in 129ms (Views: 26.6ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/api/seventh_levels" for 127.0.0.1 at 2019-04-10 11:54:06 -0400
+Processing by Api::SeventhLevelsController#index as JSON
+Started GET "/api/seventh_levels/null" for 127.0.0.1 at 2019-04-10 11:54:06 -0400
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3Cn1M0AUMaIOETglfQaKLA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendering api/seventh_levels/index.json.jbuilder
+  [1m[36mSeventhLevel Load (3.7ms)[0m  [1m[34mSELECT "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."user_id" = $1[0m  [["user_id", 18]]
+  ↳ app/views/api/seventh_levels/index.json.jbuilder:1
+  Rendered api/seventh_levels/index.json.jbuilder (139.3ms)
+Completed 200 OK in 264ms (Views: 122.1ms | ActiveRecord: 37.9ms)
+
+
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"null"}
+  [1m[36mSeventhLevel Load (1.1ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+Completed 404 Not Found in 27ms (ActiveRecord: 17.7ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find SeventhLevel with 'id'=null:
+  app/controllers/api/seventh_levels_controller.rb:8:in `show'
+
+Started GET "/api/seventh_levels/null" for 127.0.0.1 at 2019-04-10 11:54:07 -0400
+Processing by Api::SeventhLevelsController#show as JSON
+  Parameters: {"id"=>"null"}
+  [1m[36mSeventhLevel Load (1.9ms)[0m  [1m[34mSELECT  "seventh_levels".* FROM "seventh_levels" WHERE "seventh_levels"."id" = $1 LIMIT $2[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/api/seventh_levels_controller.rb:8
+Completed 404 Not Found in 4ms (ActiveRecord: 1.9ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find SeventhLevel with 'id'=null:
+  app/controllers/api/seventh_levels_controller.rb:8:in `show'
+
+Started DELETE "/api/session" for 127.0.0.1 at 2019-04-10 11:54:08 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "3Cn1M0AUMaIOETglfQaKLA"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:36
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "testing@testing.com"], ["id", 18], ["LIMIT", 1]]
+  ↳ app/models/user.rb:36
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "OzEq-PjoQgt-F2P6qXoHmA"], ["updated_at", "2019-04-10 15:54:08.140005"], ["id", 18]]
+  ↳ app/models/user.rb:36
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:36
+Completed 200 OK in 18ms (Views: 0.3ms | ActiveRecord: 8.8ms)
+
+
